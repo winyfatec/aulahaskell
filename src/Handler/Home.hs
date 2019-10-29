@@ -21,6 +21,8 @@ getHomeR = do
         toWidgetHead [cassius|
             h1
                 color : blue;
+                width: 100px;
+                background: 000;
         |]    
         [whamlet|
             <h1>
