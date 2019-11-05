@@ -40,6 +40,13 @@ body {
 .menuhaskitem {
     display: inline;
 }
+.menuhaskitem a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.menuhaskitem a:hover {
+    color: #999999;
+}
 
 
 
