@@ -32,7 +32,7 @@ getHomeR = do
         |]    
         [whamlet|
             <div class="container">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                     <div class="collapse navbar-collapse">
                         <ul class="navbar-nav">
                             <li class="nav-item active">

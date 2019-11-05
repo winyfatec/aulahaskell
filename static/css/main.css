@@ -12,6 +12,7 @@ body {
     width: 600px;
     text-align: center;
     margin: 0 auto;
+    padding-top: 30px;
 }
 
 .copytext {
@@ -21,7 +22,7 @@ body {
 #imgfatec {
     width: 100px;
 }
-
+/*
 .navbar {
     background-color: blue !important;
-}
+}*/
