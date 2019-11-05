@@ -17,6 +17,8 @@ getHomeR = do
     --addScript (StaticR js_main_js)
         setTitle "Aula Haskell Fatec"
         addScript $ StaticR js_main_js
+        addScript $ StaticR js_crafty_js
+        addScript $ StaticR js_game_js
         addStylesheet $ StaticR css_main_css
         addScriptRemote "http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"
         toWidgetHead [julius|
