@@ -53,7 +53,12 @@ getHomeR = do
                             <img class="d-block w-100" src=@{StaticR slide1_jpg}>
                         <div class="carousel-item">
                             <img class="d-block w-100" src=@{StaticR slide2_jpg}>
-                            
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true">
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true">
+                    
+                    
             <img id="imgfatec" src=@{StaticR fatec_jpg}>
             <button onclick="ola()">
                 OK!
