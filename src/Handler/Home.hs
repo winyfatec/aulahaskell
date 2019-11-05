@@ -54,7 +54,7 @@ getHomeR = do
                         Pagina 1
                 <li class="menuhaskitem">
                     <a href=@{Page2R}>
-                        Pagina 2 
+                        Pagina 2
                 
             
             
