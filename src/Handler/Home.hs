@@ -33,7 +33,7 @@ getHomeR = do
         [whamlet|
             <div class="container">
                 <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav mr-auto">
+                    <ul class="navbar-nav">
                         <li class="nav-item active">
                             <a class="nav-link" href="#">
                                 Item 1
