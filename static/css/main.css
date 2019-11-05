@@ -9,7 +9,8 @@ body {
 }
 
 #imgfatec {
-    width: 250px;
+    width: 150px;
+    float: left;
 }
 
 .navbar-light {

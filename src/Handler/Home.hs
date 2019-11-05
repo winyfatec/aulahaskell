@@ -60,6 +60,6 @@ getHomeR = do
                     
                     
             <img id="imgfatec" src=@{StaticR fatec_jpg}>
-            <button onclick="ola()">
-                OK!
+            <span class="foot">
+                &copy; Aula Haskell Fatec BS
         |]
