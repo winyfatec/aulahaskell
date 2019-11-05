@@ -37,15 +37,15 @@ getHomeR = do
                         <ul class="navbar-nav">
                             <li class="nav-item active">
                                 <a class="nav-link" href="#">
-                                    Item 1
+                                    Home
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Item 2
+                                    Jogo
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="#">
-                                        Item 3
+                                        Descrição
                                     <a class="dropdown-item" href="#">
-                                        Item 4
+                                        Jogar
                                         
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
