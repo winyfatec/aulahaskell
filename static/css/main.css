@@ -21,6 +21,6 @@ body {
     width: 100px;
 }
 
-.navbar-light {
-    background-color: blue;
+.navbar {
+    background-color: blue !important;
 }

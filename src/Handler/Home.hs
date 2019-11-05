@@ -60,7 +60,7 @@ getHomeR = do
                     
                     
             <div class="foot">
-                <img id="imgfatec" src=@{StaticR fatec_jpg}>
+                <img id="imgfatec" src=@{StaticR fatec_png}>
                 <span class="copytext">
-                    &copy; Aula Haskell Fatec BS
+                    Desenvolvido para a disciplina de Tópicos Especiais em Informática na Fatec BS
         |]
