@@ -33,6 +33,7 @@ getProdutoR = do
                 Cadastro de Produtos
             <form method=post action=@{ProdutoR}>
                 ^{widget}
+                <input type="submit" value="Cadastrar">
         |]
 
 postProdutoR :: Handler Html
