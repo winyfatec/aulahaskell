@@ -19,6 +19,7 @@ getHomeR = do
         addScript $ StaticR js_main_js
         addStylesheet $ StaticR css_main_css
         addScriptRemote "http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"
+        AddScriptRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         addStylesheetRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         toWidgetHead [julius|
             function ola(){
@@ -31,11 +32,14 @@ getHomeR = do
         |]    
         [whamlet|
             <div class="container">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <a class="navbar-brand" href="#">
-                        Navbar
-                        <button class="navbar-toggler" type="button" data-toggle="collapse">
-                        <span class="navbar-toggler-icon">
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">
+                                Item 1
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Item 2
                 <span class="texto">
                     Lorem ipsum
                     <img id="imgfatec" src=@{StaticR fatec_jpg}>
