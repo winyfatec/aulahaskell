@@ -17,10 +17,9 @@ getHomeR = do
     --addScript (StaticR js_main_js)
         setTitle "Aula Haskell Fatec"
         addScript $ StaticR js_main_js
-        addScript $ StaticR js_crafty_js
-        addScript $ StaticR js_game_js
         addStylesheet $ StaticR css_main_css
         addScriptRemote "http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"
+        addStylesheetRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         toWidgetHead [julius|
             function ola(){
                 alert("OI");
@@ -32,6 +31,11 @@ getHomeR = do
         |]    
         [whamlet|
             <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="#">
+                        Navbar
+                        <button class="navbar-toggler" type="button" data-toggle="collapse">
+                        <span class="navbar-toggler-icon">
                 <span class="texto">
                     Lorem ipsum
                     <img id="imgfatec" src=@{StaticR fatec_jpg}>
