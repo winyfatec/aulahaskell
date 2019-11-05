@@ -11,3 +11,7 @@ body {
 #imgfatec {
     width: 250px;
 }
+
+.navbar-light {
+    background-color: blue;
+}

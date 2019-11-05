@@ -16,11 +16,11 @@ getHomeR = do
     --addStylesheet (StaticR css_bootstrap_css)
     --addScript (StaticR js_main_js)
         setTitle "Aula Haskell Fatec"
-        addScript $ StaticR js_main_js
-        addStylesheet $ StaticR css_main_css
+        addStylesheetRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         addScriptRemote "http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"
         addScriptRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        addStylesheetRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        addStylesheet $ StaticR css_main_css
+        addScript $ StaticR js_main_js
         toWidgetHead [julius|
             function ola(){
                 alert("OI");
