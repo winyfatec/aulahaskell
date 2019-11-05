@@ -22,7 +22,7 @@ getPage1R = do
     defaultLayout $ do
         $(whamletFile "templates/page1.hamlet")
         toWidgetHead $ (luciusFile "templates/page1.lucius")
-        toWidgetHead $ (juliusFile "templates/page1.lucius")
+        toWidgetHead $ (juliusFile "templates/page1.julius")
 
 getHomeR :: Handler Html
 getHomeR = do
