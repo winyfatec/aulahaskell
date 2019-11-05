@@ -13,8 +13,8 @@ import Database.Persist.Postgresql
 getHomeR :: Handler Html
 getHomeR = do
     defaultLayout $ do
-    addStylesheet (css_bootstrap_css)
-    addScript (javascript_main_js)
+    addStylesheet (StaticR css_bootstrap_css)
+    addScript (StaticR javascript_main_js)
         toWidgetHead [julius|
             function ola(){
                 alert("OI");
