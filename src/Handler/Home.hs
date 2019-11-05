@@ -46,6 +46,18 @@ getHomeR = do
         |]    
         [whamlet|
             <div class="container">
+            
+            
+            <ul class="menuhask">
+                <li class="menuhaskitem">
+                    <a href=@{Page1R}>
+                        Pagina 1
+                <li class="menuhaskitem">
+                    <a href=@{Page2R}>
+                        Pagina 2
+                
+            
+            
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                     <div class="collapse navbar-collapse">
                         <ul class="navbar-nav">
