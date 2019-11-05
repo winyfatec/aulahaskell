@@ -4,7 +4,7 @@ body {
 }
 
 .container {
-    width: 90%;
+    width: 1000px;
     margin: 0 auto;
     text-align: center;
 }
@@ -43,6 +43,7 @@ body {
 .menuhaskitem a {
     color: #FFFFFF;
     text-decoration: none;
+    text-weight: bold;
 }
 .menuhaskitem a:hover {
     color: #999999;
