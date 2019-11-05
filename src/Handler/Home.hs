@@ -15,7 +15,8 @@ getHomeR = do
     defaultLayout $ do
     --addStylesheet (StaticR css_bootstrap_css)
     --addScript (StaticR js_main_js)
-    addScript $ StaticR js_main_js
+        addScript $ StaticR js_main_js
+        addScriptRemote "http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"
         toWidgetHead [julius|
             function ola(){
                 alert("OI");
