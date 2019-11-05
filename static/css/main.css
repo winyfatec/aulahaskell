@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#imgfatec {
+    width: 250px;
+}

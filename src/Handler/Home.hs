@@ -17,6 +17,7 @@ getHomeR = do
     --addScript (StaticR js_main_js)
         setTitle "Aula Haskell Fatec"
         addScript $ StaticR js_main_js
+        addStylesheet $ StaticR css_main_css
         addScriptRemote "http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"
         toWidgetHead [julius|
             function ola(){
@@ -28,10 +29,11 @@ getHomeR = do
                 color : blue;
         |]    
         [whamlet|
-            <h1>
-                OI MUNDO!
-                <img src=@{StaticR fatec_jpg}>
+            <div class="container">
+                <span class="texto">
+                    Lorem ipsum
+                    <img id="imgfatec" src=@{StaticR fatec_jpg}>
             
-            <button onclick="ola()">
-                OK!
+                    <button onclick="ola()">
+                        OK!
         |]
