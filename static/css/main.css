@@ -8,6 +8,11 @@ body {
     text-align: center;
 }
 
+.legenda {
+    font-size: 20pt;
+    color: red;
+}
+
 .foot{
     width: 600px;
     text-align: center;

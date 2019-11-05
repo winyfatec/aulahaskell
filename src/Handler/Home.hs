@@ -51,8 +51,14 @@ getHomeR = do
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img class="d-block w-100" src=@{StaticR slide1_jpg}>
+                            <div class="carousel-caption d-none d-md-block">
+                                <span class="legenda">
+                                    Tralala 1
                         <div class="carousel-item">
                             <img class="d-block w-100" src=@{StaticR slide2_jpg}>
+                            <div class="carousel-caption d-none d-md-block">
+                                <span class="legenda">
+                                    Tralala 2
                     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true">
                     <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
