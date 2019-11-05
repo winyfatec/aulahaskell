@@ -59,7 +59,8 @@ getHomeR = do
                         <span class="carousel-control-next-icon" aria-hidden="true">
                     
                     
-            <img id="imgfatec" src=@{StaticR fatec_jpg}>
-            <span class="foot">
-                &copy; Aula Haskell Fatec BS
+            <div class="foot">
+                <img id="imgfatec" src=@{StaticR fatec_jpg}>
+                <span class="copytext">
+                    &copy; Aula Haskell Fatec BS
         |]

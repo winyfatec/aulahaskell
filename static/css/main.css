@@ -8,6 +8,15 @@ body {
     text-align: center;
 }
 
+.foot{
+    width: 800px;
+    text-align: center;
+}
+
+.copytext {
+    font-size: 10pt;
+}
+
 #imgfatec {
     width: 150px;
     float: left;
