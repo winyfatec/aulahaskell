@@ -46,10 +46,13 @@ getHomeR = do
                                         Item 3
                                     <a class="dropdown-item" href="#">
                                         Item 4
-                <span class="texto">
-                    Lorem ipsum
-                    <img id="imgfatec" src=@{StaticR fatec_jpg}>
-            
-                    <button onclick="ola()">
-                        OK!
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src=@{StaticR slide1_jpg}>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src=@{StaticR slide2_jpg}>
+            <img id="imgfatec" src=@{StaticR fatec_jpg}>
+            <button onclick="ola()">
+                OK!
         |]
