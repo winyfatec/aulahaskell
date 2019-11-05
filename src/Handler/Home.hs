@@ -39,13 +39,13 @@ getHomeR = do
                                 <a class="nav-link" href="#">
                                     Item 1
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink">
                                     Item 2
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#">
-                                            Item 3
-                                        <a class="dropdown-item" href="#">
-                                            Item 4
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">
+                                        Item 3
+                                    <a class="dropdown-item" href="#">
+                                        Item 4
                 <span class="texto">
                     Lorem ipsum
                     <img id="imgfatec" src=@{StaticR fatec_jpg}>
