@@ -49,5 +49,21 @@ postProdutoR = do
             redirect ProdutoR
         _ -> redirect HomeR
         
+getListProdR :: Handler Html
+getListProdR = do
+    -- select * from produto order by produto.nome
+    produtos <- runDB $ selectList [] [Asc ProdutoNome]
+    defaultLayout $ do
+        $(whamletFile "templates/produtos.hamlet")
+    
+        
+postApagarProdR :: ProdutoId -> Handler Html
+ApagarProdR pid = do
+    _ <- runDB $ get404 pid
+    runDB $ delete pid
+    redirect ListProdR
+    
+
+    
 
 
