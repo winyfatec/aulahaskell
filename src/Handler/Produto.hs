@@ -58,7 +58,7 @@ getListProdR = do
     
         
 postApagarProdR :: ProdutoId -> Handler Html
-ApagarProdR pid = do
+postApagarProdR pid = do
     _ <- runDB $ get404 pid
     runDB $ delete pid
     redirect ListProdR
