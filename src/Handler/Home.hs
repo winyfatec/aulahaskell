@@ -46,8 +46,9 @@ getHomeR = do
         |]    
         [whamlet|
         
-            {-<script async src="//pagead2.googlesyndication.com/
+            <script async src="//pagead2.googlesyndication.com/
                 pagead/js/adsbygoogle.js">
+            {-
             <script>
                 (adsbygoogle = window.adsbygoogle || []).push({
                 google_ad_client: "pub-4764459455736825",
