@@ -3,7 +3,6 @@ git commit -m "$1" &&
 git push origin master &&
 ssh root@164.132.193.242 <<EOF
 cd aulahaskell &&
-stack clean &&
 git pull origin master &&
 stack build &&
 lsof -i:80 -Fp | sed 's/^p//' | head -n -1 | xargs kill -9;
