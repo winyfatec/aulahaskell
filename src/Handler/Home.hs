@@ -33,6 +33,7 @@ getHomeR = do
         addStylesheetRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         addScriptRemote "http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"
         addScriptRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        --addScriptRemote "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async
         addStylesheet $ StaticR css_main_css
         addScript $ StaticR js_main_js
         toWidgetHead [julius|
@@ -46,8 +47,7 @@ getHomeR = do
         |]    
         [whamlet|
         
-            <script async src="//pagead2.googlesyndication.com/
-                pagead/js/adsbygoogle.js">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
             {-
             <script>
                 (adsbygoogle = window.adsbygoogle || []).push({
