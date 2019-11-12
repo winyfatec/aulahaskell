@@ -11,7 +11,7 @@ import Import
 import Database.Persist.Postgresql
 import Text.Lucius
 import Text.Julius
-
+{-
 getPage2R :: Handler Html
 getPage2R = do
     defaultLayout $ do
@@ -23,7 +23,7 @@ getPage1R = do
         $(whamletFile "templates/page1.hamlet")
         toWidgetHead $(luciusFile "templates/page1.lucius")
         toWidgetHead $(juliusFile "templates/page1.julius")
-
+-}
 getHomeR :: Handler Html
 getHomeR = do
     defaultLayout $ do
