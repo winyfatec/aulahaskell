@@ -30,7 +30,7 @@ getAulaR = do
         sess <-- lookupSession "_NOME"
     --addStylesheet (StaticR css_bootstrap_css)
     --addScript (StaticR js_main_js)
-        setTitle "Aula Haskell Fatec"
+        setTitle "Aula Haskell Fatec" 
         addStylesheetRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         addScriptRemote "http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"
         addScriptRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
@@ -61,6 +61,8 @@ getAulaR = do
             $maybe nomeSess <- sess
                 <div> 
                     Ola #{nomeSess}
+                    <div>
+                        teste 1
                     <form action="@{LogoutR}" method=post>
                         <input type="submit" value="Sair">
             $nothing
