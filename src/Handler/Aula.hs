@@ -24,7 +24,7 @@ getPage1R = do
         toWidgetHead $(luciusFile "templates/page1.lucius")
         toWidgetHead $(juliusFile "templates/page1.julius")
 
-getHomeAulaR :: Handler Html
+getAulaR :: Handler Html
 getHomeAulaR = do
     defaultLayout $ do
     --addStylesheet (StaticR css_bootstrap_css)
