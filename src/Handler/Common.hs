@@ -22,6 +22,6 @@ getRobotsR = return $ TypedContent typePlain
                     $ toContent $(embedFile "config/robots.txt")
 
 
-getRobotsR :: Handler TypedContent
-getRobotsR = return $ TypedContent typePlain
+getAdsR :: Handler TypedContent
+getAdsR = return $ TypedContent typePlain
                     $ toContent $(embedFile "config/ads.txt")
