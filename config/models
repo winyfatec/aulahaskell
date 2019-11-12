@@ -1,3 +1,9 @@
+Usuario
+    nome Text
+    email Text
+    senha Text
+    deriving Show
+
 Produto
     nome Text
     valor Double
