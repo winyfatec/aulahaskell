@@ -27,7 +27,7 @@ getPage1R = do
 getAulaR :: Handler Html
 getAulaR = do
     defaultLayout $ do
-        sess <-- lookupSession "_NOME"
+        sess <- lookupSession "_NOME"
     --addStylesheet (StaticR css_bootstrap_css)
     --addScript (StaticR js_main_js)
         setTitle "Aula Haskell Fatec" 
@@ -58,16 +58,16 @@ getAulaR = do
         
             <div class="container">
             
-            $maybe nomeSess <- sess
-                <div> 
-                    Ola #{nomeSess}
+                $maybe nomeSess <- sess
+                    <div> 
+                        Ola #{nomeSess}
+                        <div>
+                            teste 1
+                        <form action="@{LogoutR}" method=post>
+                            <input type="submit" value="Sair">
+                $nothing
                     <div>
-                        teste 1
-                    <form action="@{LogoutR}" method=post>
-                        <input type="submit" value="Sair">
-            $nothing
-                <div>
-                    Deslogado
+                        Deslogado
             
             <ul class="menuhask">
                 <li class="menuhaskitem">
