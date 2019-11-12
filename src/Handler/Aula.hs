@@ -27,6 +27,7 @@ getPage1R = do
 getAulaR :: Handler Html
 getAulaR = do
     defaultLayout $ do
+        sess <-- lookupSession "_NOME"
     --addStylesheet (StaticR css_bootstrap_css)
     --addScript (StaticR js_main_js)
         setTitle "Aula Haskell Fatec"
@@ -56,6 +57,15 @@ getAulaR = do
         [whamlet|
         
             <div class="container">
+            
+            $maybe nomeSess <- sess
+                <div> 
+                    Ola #{nomeSess}
+                    <form action="@{LogoutR}" method=post>
+                        <input type="submit" value="Sair">
+            $nothing
+                <div>
+                    Deslogado
             
             <ul class="menuhask">
                 <li class="menuhaskitem">
