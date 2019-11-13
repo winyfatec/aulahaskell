@@ -26,10 +26,10 @@ getLoginR = do
     defaultLayout $ do
         msg <- getMessage
         [whamlet|
-            $maybe mensa <- msg
+            $Maybe mensa <- msg
                 <div>
                     ^{mensa}
-            $nothing
+            $Nothing
             
             <h1>
                 Login
