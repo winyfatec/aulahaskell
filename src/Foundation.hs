@@ -31,7 +31,7 @@ instance Yesod App where
     isAuthorized (StaticR _) _ = return Authorized
     isAuthorized AdminR _ = isRoot
     isAuthorized _ _ = isUsuario
-    
+       
 isUsuario :: Handler AuthResult
 isUsuario = do
     sess <- lookupSession "_NOME"
