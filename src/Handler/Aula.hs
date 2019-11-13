@@ -60,7 +60,7 @@ getAulaR = do
             
                 $maybe nomeSess <- sess
                     <div> 
-                        Ola #{nomeSess}
+                        Ola #{nomeSess}  
                         <div>
                             teste 1
                         <form action="@{LogoutR}" method=post>
