@@ -26,10 +26,10 @@ getLoginR = do
     defaultLayout $ do
         msg <- getMessage
         [whamlet|
-            $Maybe mensa <- msg
+            $maybe mensa <- msg
                 <div>
                     ^{mensa}
-            $Nothing
+            $nothing
             
             <h1>
                 Login
@@ -38,7 +38,7 @@ getLoginR = do
                 <input type="submit" value="Entrar">
         |]
 
-
+   
 postLoginR :: Handler Html
 postLoginR = do
     ((result,_),_) <- runFormPost formLogin
