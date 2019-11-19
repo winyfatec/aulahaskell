@@ -46,12 +46,9 @@ getHomeR = do
                 color : blue;
         |]    
         toWidgetHead [hamlet|
-            <script data-ad-client="ca-pub-4764459455736825" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             <script>
-                (adsbygoogle = window.adsbygoogle || []).push({
-                google_ad_client: "pub-4764459455736825",
-                enable_page_level_ads: true
-                });
+                (adsbygoogle = window.adsbygoogle || []).push({ google_ad_client: "ca-pub-3156965201812393",enable_page_level_ads: true});
         |]
         [whamlet|
         
