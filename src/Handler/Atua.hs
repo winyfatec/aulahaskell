@@ -12,7 +12,7 @@ import Database.Persist.Postgresql
 import Text.Lucius
 import Text.Julius
 
-seriesCB = do
+serieCB = do
     rows <- runDB $ selectList [] [Asc SerieNome]
     optionsPairs $ 
         map (\r -> (serieNome $ entityVal r, entityKey r)) rows
