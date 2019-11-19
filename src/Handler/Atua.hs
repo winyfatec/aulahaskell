@@ -15,13 +15,13 @@ import Text.Julius
 seriesCB = do
     rows <- runDB $ selectList [] [Asc SerieNome]
     optionsPairs $ 
-        map (\r -> (serieNome $ entityVal r, entityKey r)) row
+        map (\r -> (serieNome $ entityVal r, entityKey r)) rows
         
 
 atorCB = do
     rows <- runDB $ selectList [] [Asc AtorNome]
     optionsPairs $ 
-        map (\r -> (atorNome $ entityVal r, entityKey r)) row
+        map (\r -> (atorNome $ entityVal r, entityKey r)) rows
         
 formAtua :: Form Atua
 formAtua  = renderBootstrap $ Atua
