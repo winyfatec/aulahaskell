@@ -25,7 +25,7 @@ instance Yesod App where
     makeLogger = return . appLogger
     --authRoute _ = return (Just LoginR)
     authRoute _ = Just $ LoginR
- --   isAuthorized AulaR _ = return Authorized
+    isAuthorized AulaR _ = return Authorized
     isAuthorized UsuarioR _ = return Authorized
     isAuthorized LoginR _ = return Authorized
     isAuthorized (StaticR _) _ = return Authorized
