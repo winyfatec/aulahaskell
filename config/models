@@ -22,7 +22,7 @@ Ator
     deriving Show
 
 Atua
-    serieid SerirId
+    serieid SerieId
     atorid AtorId
     ano Int
 
