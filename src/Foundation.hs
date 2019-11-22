@@ -25,17 +25,17 @@ instance Yesod App where
     makeLogger = return . appLogger
     --authRoute _ = return (Just LoginR)
     authRoute _ = Just $ LoginR
-    isAuthorized HomeR _ = return Authorized
-    isAuthorized AulaR _ = return Authorized
-    isAuthorized UsuarioR _ = return Authorized
-    isAuthorized LoginR _ = return Authorized
-    isAuthorized (StaticR _) _ = return Authorized
-    isAuthorized AdminR _ = isRoot
-    isAuthorized _ _ = isUsuario
-    isAuthorized AtorR _ = return Authorized
-    isAuthorized SerieR _ = return Authorized
-    isAuthorized AtuaR _ = return Authorized
-    isAuthorized (ElencoR _) _ = return Authorized
+    isAuthorized HomeR _        = return Authorized
+    isAuthorized AulaR _        = return Authorized
+    isAuthorized UsuarioR _     = return Authorized
+    isAuthorized LoginR _       = return Authorized
+    isAuthorized (StaticR _) _  = return Authorized
+    isAuthorized AdminR _       = isRoot
+    isAuthorized _ _            = isUsuario
+    isAuthorized AtorR _        = return Authorized
+    isAuthorized SerieR _       = return Authorized
+    isAuthorized AtuaR _        = return Authorized
+    isAuthorized (ElencoR _) _  = return Authorized
        
 isUsuario :: Handler AuthResult
 isUsuario = do
@@ -43,6 +43,7 @@ isUsuario = do
     case sess of
         Nothing -> return AuthenticationRequired
         (Just _) -> return Authorized 
+        
 isRoot :: Handler AuthResult
 isRoot = do
     sess <- lookupSession "_NOME"
