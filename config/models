@@ -26,3 +26,14 @@ Atua
     atorid AtorId
     ano Int
 
+User
+    username Text
+    email Text
+    password Text
+    deriving Show
+
+Chat
+    name Text
+    msgdate timestamp
+    message Text
+    deriving Show
