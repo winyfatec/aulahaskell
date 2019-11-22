@@ -93,5 +93,5 @@ getHomeR = do
             <div class="foot">
                 <img id="imgfatec" src=@{StaticR fatec_png}>
                 <span class="copytext">
-                    Desenvolvido para a disciplina de Tópicos Especiais em Informática na Fatec BS
+                    2019. Desenvolvido para a disciplina de Tópicos Especiais em Informática na Fatec BS
         |]
