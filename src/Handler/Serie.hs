@@ -1,54 +1,53 @@
 {-# LANGUAGE NoImplicitPrelude #-}
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE TemplateHaskell #-}
-{-# LANGUAGE MultiParamTypeClasses #-}
 {-# LANGUAGE QuasiQuotes #-}
+{-# LANGUAGE MultiParamTypeClasses #-}
 {-# LANGUAGE TypeFamilies #-}
 module Handler.Serie where
 
 import Import
---import Network.HTTP.Types.Status
-import Database.Persist.Postgresql
 import Text.Lucius
 import Text.Julius
+--import Network.HTTP.Types.Status
+import Database.Persist.Postgresql
 
-
-formSerie :: Form Serie
-formSerie  = renderBootstrap $ Serie
-    <$> areq textField "Nome" Nothing
-    <*> areq dayField "Nascimento" Nothing
-
-
+-- renderDivs
+formSerie :: Form Serie 
+formSerie = renderBootstrap $ Serie
+    <$> areq textField "Nome: " Nothing
+    <*> areq intField  "Ano: " Nothing
+    <*> areq textField "Pais: " Nothing
 
 getSerieR :: Handler Html
-getSerieR = do
-    (widget,enctype) <- generateFormPost formSerie
-    defaultLayout $ do
-        msg <- getMessage
+getSerieR = do 
+    (widget,_) <- generateFormPost formSerie
+    msg <- getMessage
+    defaultLayout $ 
         [whamlet|
-            $maybe mensa <- msg
+            $maybe mensa <- msg 
                 <div>
                     ^{mensa}
-            $nothing
             
             <h1>
-                Cadastro de Serie
+                CADASTRO DE SERIE
+            
             <form method=post action=@{SerieR}>
                 ^{widget}
                 <input type="submit" value="Cadastrar">
         |]
 
-
 postSerieR :: Handler Html
-postSerieR = do
+postSerieR = do 
     ((result,_),_) <- runFormPost formSerie
-    case result of
-        FormSuccess serie -> do
-            runDB $ insert serie
+    case result of 
+        FormSuccess serie -> do 
+            runDB $ insert serie 
             setMessage [shamlet|
-                <h2>
-                    Serie inserido com sucesso
+                <div>
+                    SERIE INCLUIDO
             |]
             redirect SerieR
         _ -> redirect HomeR
+
 
