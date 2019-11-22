@@ -63,14 +63,19 @@ postAtuaR = do
         _ -> redirect HomeR
 
 getElencoR :: SerieId -> Handler Html
-getElencoR serieid = do
-    let sql = s = "SELECT ??,?? FROM serie INNER JOIN atua ON atua.serieid = serie.id INNER JOIN ator ON arua.atorid = ator.id WHERE serie.id = ?"
-    atores <- runDB $ rawSql sql [toPersistValue serieid]
-    defaultLayout $ do
+getElencoR serieid = do 
+    let sql = "SELECT ??,??,?? FROM serie \
+          \ INNER JOIN atua ON atua.serieid = serie.id \
+          \ INNER JOIN ator ON atua.atorid = ator.id \
+          \ WHERE serie.id = ?"
+    serie <- runDB $ get404 serieid
+    atores <- runDB $ rawSql sql [toPersistValue serieid] :: Handler [(Entity Serie,Entity Atua,Entity Ator)]
+    defaultLayout $ do 
         [whamlet|
             <h1>
-                Elenco de #{serieNome serie}
+                ELENCO DE #{serieNome serie}
             <ul>
                 $forall (Entity _ _, Entity _ _, Entity _ ator) <- atores
-                    <li> ator
+                    <li>
+                        #{atorNome ator}
         |]
