@@ -4,23 +4,23 @@
 /robots.txt RobotsR GET
 
 / HomeR GET 
-/aula AulaR  GET
-/p1 Page1R  GET
-/p2 Page2R  GET
+/aula       AulaR       GET
+/p1         Page1R      GET
+/p2         Page2R      GET
 
 /produto    ProdutoR    GET POST
-/listar ListProdR   GET
+/listar     ListProdR   GET
 /produto/#ProdutoId/apagar  ApagarProdR POST
 
 
 /cadastro   UsuarioR    GET POST
-/login   LoginR    GET POST
-/logout   LogoutR    POST
+/login      LoginR      GET POST
+/logout     LogoutR         POST
 
-/admin   AdminR    GET
+/admin      AdminR      GET
 
 
-/ator   AtorR   GET POST
-/serie   SerieR   GET POST
-/atua   AtuaR   GET POST
+/ator       AtorR       GET POST
+/serie      SerieR      GET POST
+/atua       AtuaR       GET POST
 /elenco/#SerieId ElencoR GET
