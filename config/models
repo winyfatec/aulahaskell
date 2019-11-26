@@ -30,7 +30,7 @@ Atua
 
 User
     username Text
-    UniqueEmailUser email
+    
     password Text
     deriving Show
 
