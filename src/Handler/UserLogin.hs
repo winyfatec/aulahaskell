@@ -47,7 +47,7 @@ postUserLoginR = do
             setSession "_NOME" "root"
             redirect HomeR
         FormSuccess (email,senha) -> do
-            usuario <- runDB $ getBy (UniqueEmailAdm email)
+            usuario <- runDB $ getBy (UniqueEmailUsuario email)
             case usuario of
                 Nothing -> do
                     setMessage[shamlet|
