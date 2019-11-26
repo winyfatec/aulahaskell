@@ -26,6 +26,8 @@ Atua
     atorid AtorId
     ano Int
 
+
+
 User
     username Text
     email Text
