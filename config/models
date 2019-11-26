@@ -30,11 +30,12 @@ Atua
 
 User
     username Text
+    UniqueUsername username
     password Text
     deriving Show
 
 Chat
     name Text
-    msgdate UTCTime
+    msgdate TimeOfDay
     message Text
     deriving Show
