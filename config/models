@@ -30,7 +30,6 @@ Atua
 
 User
     username Text
-    
     password Text
     deriving Show
 
