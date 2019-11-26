@@ -67,8 +67,8 @@ postUserLoginR = do
                         redirect UserLoginR
         _ -> redirect HomeR
 
-postLogoutR :: Handler Html
-postLogoutR = do
+postUserLogoutR :: Handler Html
+postUserLogoutR = do
     deleteSession "_NOME"
     redirect HomeR
     
