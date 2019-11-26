@@ -55,9 +55,9 @@ postUserLoginR = do
                             Usuario nao encntrado
                     |]
                     redirect UserLoginR
-                Just(Entity _ usr) -> do
+                Just(Entity uid usr) -> do
                     if(userPassword usr == senha) then do
-                        setSession "_NOME" (username usr)
+                        setSession "_NOME" (userUsername usr)
                         redirect HomeR
                     else do
                         setMessage[shamlet|
