@@ -46,13 +46,13 @@ postUserLoginR = do
         FormSuccess ("root@root.com","root") -> do
             setSession "_NOME" "root"
             redirect HomeR
-        FormSuccess (email,senha) -> do
-            usuario <- runDB $ getBy (UniqueEmailUser email)
+        FormSuccess (username,senha) -> do
+            usuario <- runDB $ getBy (Username username)
             case usuario of
                 Nothing -> do
                     setMessage[shamlet|
                         <div>
-                            Email nao encntrado
+                            Usuario nao encntrado
                     |]
                     redirect UserLoginR
                 Just(Entity _ usr) -> do
