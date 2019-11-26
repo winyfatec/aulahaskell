@@ -36,6 +36,6 @@ User
 
 Chat
     name Text
-    msgdate TimeOfDay
+    msgdate UTCTime
     message Text
     deriving Show
