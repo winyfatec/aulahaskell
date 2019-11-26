@@ -54,10 +54,10 @@ postUserLoginR = do
                         <div>
                             Email nao encntrado
                     |]
-                    redirect LoginR
+                    redirect UserLoginR
                 Just(Entity _ usr) -> do
                     if(userPassword usr == senha) then do
-                        setSession "_NOME" (userName usr)
+                        setSession "_NOME" (userUserame usr)
                         redirect HomeR
                     else do
                         setMessage[shamlet|
