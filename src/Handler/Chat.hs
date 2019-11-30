@@ -17,6 +17,7 @@ formChat :: Form Chat
 formChat = renderBootstrap $ Chat
     <$> areq textField "Nome: " Nothing
     <*> areq textField "Mensagem: " Nothing
+    <*> areq textField "Mensagem: " Nothing
 
 getChatR :: Handler Html
 getChatR = do 
