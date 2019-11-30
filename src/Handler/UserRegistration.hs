@@ -16,7 +16,6 @@ import Text.Julius
 formRegister :: Form User
 formRegister  = renderBootstrap $ User
     <$> areq textField "Nome de usuário: " Nothing
-    <*> areq emailField "Email: " Nothing
     <*> areq passwordField "Senha: " Nothing
 
 
