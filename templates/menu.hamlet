@@ -1,6 +1,6 @@
 $if (tstvar == "teste")
     <div .container>
-        Teste 1
+        Teste Menu 1
 $else
     <div .container>
-        Teste 2
+        Teste Menu 2
