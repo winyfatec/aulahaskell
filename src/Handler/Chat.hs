@@ -15,8 +15,8 @@ import Data.Time
 import Control.Monad.IO.Class
 
 -- renderDivs
-formChat :: Form (Text)
-formChat = renderBootstrap $ (_)
+formChat :: Form Text
+formChat = renderBootstrap $ Text
     <$> areq textField "Mensagem: " Nothing
 
 getChatR :: Handler Html
