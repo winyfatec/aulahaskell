@@ -41,7 +41,7 @@ postUserConfigR = do
     ((result,_),_) <- runFormPost formUserConfig
     case result of
         FormSuccess user -> do
-            runDB $ update user
+            -- runDB $ update user
             setMessage [shamlet|
                 <h2>
                     Dados atualizados com sucesso!
