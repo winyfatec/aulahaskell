@@ -13,6 +13,7 @@ import Text.Julius
 
 getIndexR :: Handler Html
 getIndexR = do
+    (widget,enctype) <- generateFormPost formUserLogin
     defaultLayout $ do
         sess <- lookupSession "_NOME"
     --addStylesheet (StaticR css_bootstrap_css)

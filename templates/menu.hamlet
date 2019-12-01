@@ -15,10 +15,12 @@
             <li .nav-item>
                 $maybe nomeSess <- sess
                     <a .nav-link href="@{UserLogoutR}">
-                        Sair
+                        <form action="@{LogoutR}" method=post>
+                            <input type="submit" value="Sair">
                 $nothing
                     <a .nav-link href="@{UserLoginR}">
                         Logar
+                
 
 
 
