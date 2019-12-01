@@ -14,11 +14,11 @@
                         Jogar
             <li .nav-item>
                 $maybe nomeSess <- sess
-                    <a .nav-link href="@{UserLoginR}">
-                        Logar
-                $nothing
                     <a .nav-link href="@{UserLogoutR}">
                         Sair
+                $nothing
+                    <a .nav-link href="@{UserLoginR}">
+                        Logar
 
 
 
