@@ -15,7 +15,7 @@ import Text.Julius
 getPage2R :: Handler Html
 getPage2R = do
     defaultLayout $ do
-        tstvar = "teste"
+        let tstvar = "teste" :: Text
         $(whamletFile "templates/page2.hamlet")
 
 getPage1R :: Handler Html
