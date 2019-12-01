@@ -10,11 +10,9 @@ import Import
 import Database.Persist.Postgresql
 import Text.Lucius
 import Text.Julius
-import UserLogin
 
 getIndexR :: Handler Html
 getIndexR = do
-    (widget,enctype) <- generateFormPost formUserLogin
     defaultLayout $ do
         sess <- lookupSession "_NOME"
     --addStylesheet (StaticR css_bootstrap_css)
