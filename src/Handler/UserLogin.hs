@@ -11,7 +11,7 @@ import Import
 import Database.Persist.Postgresql
 import Text.Lucius
 import Text.Julius
-import Form.Bootstrap4
+import Form.Bootstrap
 import Yesod
 
 
