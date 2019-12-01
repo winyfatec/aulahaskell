@@ -13,10 +13,10 @@
                     <a .dropdown-item href="#">
                         Jogar
             <li .nav-item>
-                $if (tstvar == "teste")
+                $maybe nomeSess <- sess
                     <a .nav-link href="@{UserLoginR}">
                         Logar
-                $else
+                $nothing
                     <a .nav-link href="@{#UserLogoutR}">
                         Sair
 
