@@ -48,7 +48,6 @@ getHomeR = do
         |]
         $(whamletFile "templates/menu.hamlet")
         [whamlet|
-        
             <div .container>
                 $maybe nomeSess <- sess
                     <div> 
