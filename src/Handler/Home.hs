@@ -27,8 +27,8 @@ getPage1R = do
 getHomeR :: Handler Html
 getHomeR = do
     defaultLayout $ do
-        sess <- lookupSession "_NOME"
         let tstvar = "teste" :: Text
+        sess <- lookupSession "_NOME"
     --addStylesheet (StaticR css_bootstrap_css)
     --addScript (StaticR js_main_js)
         setTitle "Aula Haskell Fatec"
