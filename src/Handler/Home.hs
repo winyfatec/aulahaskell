@@ -28,6 +28,7 @@ getHomeR :: Handler Html
 getHomeR = do
     defaultLayout $ do
         sess <- lookupSession "_NOME"
+        let tstvar = "teste" :: Text
     --addStylesheet (StaticR css_bootstrap_css)
     --addScript (StaticR js_main_js)
         setTitle "Aula Haskell Fatec"
@@ -54,7 +55,6 @@ getHomeR = do
             <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
         |]
-        let tstvar = "teste" :: Text
         --$(whamletFile "templates/menu.hamlet")
         [whamlet|
         
