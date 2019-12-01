@@ -83,7 +83,8 @@ h1 {
 }
 
 .jogo {
-    width: 100px;
+    margin: 0 auto;
+    width: 900px;
     border-radius: 20px;
     background-color: #000000;
 }
