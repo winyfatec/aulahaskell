@@ -62,7 +62,7 @@ getHomeR = do
                         Ola #{nomeSess}  
                         <div>
                             teste 1
-                        <form action="@{LogoutR}" method=post>
+                        <form action="@{UserLogoutR}" method=post>
                             <input type="submit" value="Sair">
                 $nothing
                     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
