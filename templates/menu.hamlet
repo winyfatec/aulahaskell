@@ -1,6 +1,25 @@
-$if (tstvar == "teste")
-    <div .container>
-        Teste Menu 1
-$else
-    <div .container>
-        Teste Menu 2
+<nav .navbar.navbar-expand-lg.navbar-dark.bg-dark>
+    <div .collapse.navbar-collapse>
+        <ul .navbar-nav>
+            <li .nav-item>
+                <a .nav-link href="#">
+                    Home
+            <li .nav-item.dropdown>
+                <a .nav-link.dropdown-toggle #navbarDropdownMenuLink role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Jogo
+                <div .dropdown-menu aria-labelledby="navbarDropdown">
+                    <a .dropdown-item href="#">
+                        Descrição
+                    <a .dropdown-item href="#">
+                        Jogar
+            <li .nav-item>
+                $if (tstvar == "teste")
+                    <a .nav-link href="#">
+                        Logar
+                $else
+                    <a .nav-link href="#">
+                        Sair
+
+
+
+

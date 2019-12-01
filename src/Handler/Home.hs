@@ -66,22 +66,7 @@ getHomeR = do
                             teste 1
                         <form action="@{UserLogoutR}" method=post>
                             <input type="submit" value="Sair">
-                $nothing
-                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                        <div class="collapse navbar-collapse">
-                            <ul class="navbar-nav">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="#">
-                                        Home
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Jogo
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#">
-                                            Descrição
-                                        <a class="dropdown-item" href="#">
-                                            Jogar
-                                            
+                $nothing                 
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
