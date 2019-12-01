@@ -2,7 +2,7 @@
     PAGINA 2
 
 <div>
-    UMA DIV
+    UMA DIV ##{tstvar}
 
 <a href=@{HomeR}>
     Voltar
