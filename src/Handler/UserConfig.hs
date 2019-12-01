@@ -44,7 +44,7 @@ postUserConfigR = do
             runDB $ update user
             setMessage [shamlet|
                 <h2>
-                    Atualizado!
+                    Dados atualizados com sucesso!
             |]
             redirect UserConfigR
         _ -> redirect HomeR
