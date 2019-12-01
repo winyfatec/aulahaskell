@@ -57,7 +57,7 @@ getHomeR = do
         [whamlet|
         
             <div class="container">
-            $   maybe nomeSess <- sess
+                $maybe nomeSess <- sess
                     <div> 
                         Ola #{nomeSess}  
                         <div>
