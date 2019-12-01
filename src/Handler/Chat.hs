@@ -16,7 +16,7 @@ import Control.Monad.IO.Class
 
 -- renderDivs
 formChat :: Form (Text)
-formChat = renderBootstrap $ ()
+formChat = renderBootstrap
     <$> areq textField "Mensagem: " Nothing
 
 getChatR :: Handler Html
