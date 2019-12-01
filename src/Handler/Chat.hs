@@ -40,7 +40,7 @@ postChatR = do
     ((result,_),_) <- runFormPost formChat
     case result of 
         FormSuccess chat -> do 
-            username <- 
+            username <- lookupSession "_NOME"
             runDB $ insert username chat now 
             setMessage [shamlet|
                 <div>
