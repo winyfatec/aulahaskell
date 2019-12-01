@@ -43,7 +43,7 @@ postChatR = do
         FormSuccess chat -> do 
             username <- lookupSession "_NOME"
             now <- getCurrentTime
-            runDB $ insert $ User username now chat 
+            runDB $ insert $ username now chat 
             setMessage [shamlet|
                 <div>
                     MENSAGEM POSTADA
