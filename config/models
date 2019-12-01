@@ -33,9 +33,3 @@ User
     UniqueUsername username
     password Text
     deriving Show
-
-Chat
-    name Text
-    msgdate UTCTime default=CURRENT_TIME
-    message Text
-    deriving Show

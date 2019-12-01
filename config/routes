@@ -26,7 +26,6 @@
 
 
 /           HomeR       GET
-/chat       ChatR       GET POST
 /register   RegisterR   GET POST
 /userlogin  UserLoginR  GET POST
 /userlogout UserLogoutR     POST
