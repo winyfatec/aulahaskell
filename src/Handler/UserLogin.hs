@@ -18,7 +18,7 @@ import Yesod.Form.Bootstrap3
 formUserLogin :: Form (Text,Text)
 formUserLogin  = renderBootstrap $ (,)
     <$> areq textField (bfs ("Nome de Usuário" :: Text)) Nothing
-    <*> areq passwordField "Senha" Nothing
+    <*> areq passwordField (bfs ("Senha" :: Text)) Nothing
     <*  bootstrapSubmit ("Logar" :: BootstrapSubmit Text)
 
 
