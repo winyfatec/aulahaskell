@@ -1,0 +1,6 @@
+$if (tstvar == "teste")
+    <div .container>
+        Teste 1
+$else
+    <div .container>
+        Teste 2
