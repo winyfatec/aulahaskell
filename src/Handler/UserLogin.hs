@@ -11,7 +11,8 @@ import Import
 import Database.Persist.Postgresql
 import Text.Lucius
 import Text.Julius
-import Yesod.Form.BootstrapBasicForm
+import Form.Bootstrap4
+import Yesod
 
 
 formUserLogin :: Form (Text,Text)
@@ -23,7 +24,7 @@ formUserLogin  = renderBootstrap $ (,)
 
 getUserLoginR :: Handler Html
 getUserLoginR = do
-    (widget,enctype) <- generateFormPost $ renderBootstrap3 BootstrapBasicForm formUserLogin
+    (widget,enctype) <- generateFormPost $ renderBootstrap4 BootstrapBasicForm formUserLogin
     defaultLayout $ do
         msg <- getMessage
         setTitle "Aula Haskell Fatec :: Login"
