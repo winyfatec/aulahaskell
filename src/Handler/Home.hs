@@ -59,7 +59,6 @@ getHomeR = do
         
             <div class="container">
                 $maybe nomeSess <- sess
-                    $(whamletFile "templates/home-public.hamlet")
                     <div> 
                         Ola #{nomeSess}  
                         <div>
