@@ -24,7 +24,7 @@ formUserLogin  = renderBootstrap $ (,)
 
 getUserLoginR :: Handler Html
 getUserLoginR = do
-    (widget,enctype) <- generateFormPost formUserLogin
+    (widget,enctype) <- generateFormPost $ renderBootstrap3 BootstrapBasicForm formUserLogin
     defaultLayout $ do
         msg <- getMessage
         setTitle "Aula Haskell Fatec :: Login"
