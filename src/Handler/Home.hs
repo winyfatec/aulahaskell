@@ -53,7 +53,9 @@ getHomeR = do
                 $maybe nomeSess <- sess
                     <div> 
                         Bem-vindo, #{nomeSess}  
-                    <div #pacman>
+                    <div .jogo #pacman>
+                    <span .credit>
+                        <a href="https://github.com/daleharvey/pacman" target="_blank">Credito: https://github.com/daleharvey/pacman</a>
                 $nothing
                     
         |]

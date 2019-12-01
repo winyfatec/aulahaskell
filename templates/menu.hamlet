@@ -6,17 +6,14 @@
                     Home
             <li .nav-item.dropdown>
                 <a .nav-link.dropdown-toggle #navbarDropdownMenuLink role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Jogo
+                    Conta
                 <div .dropdown-menu aria-labelledby="navbarDropdown">
                     <a .dropdown-item href="#">
-                        Descrição
-                    <a .dropdown-item href="#">
-                        Jogar
+                        Configurar
             <li .nav-item>
                 $maybe nomeSess <- sess
-                    <a .nav-link href="@{UserLogoutR}">
-                        <form action="@{LogoutR}" method=post>
-                            <input type="submit" value="Sair">
+                    <form action="@{UserLogoutR}" method=post>
+                        <input type="submit" value="Sair">
                 $nothing
                     <a .nav-link href="@{UserLoginR}">
                         Logar
