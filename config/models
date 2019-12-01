@@ -36,6 +36,6 @@ User
 
 Chat
     name Text
-    msgdate UTCTime default=CURRENT_TIME
+    msgdate UTCTime Maybe default=CURRENT_TIME
     message Text
     deriving Show
