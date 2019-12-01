@@ -15,10 +15,9 @@ import Data.Time
 import Control.Monad.IO.Class
 
 -- renderDivs
-formChat :: Form (Text,Text)
-formChat = renderBootstrap $ (,)
-    <$> areq textField "Username: " Nothing
-    <*> areq textField "Mensagem: " Nothing
+formChat :: Form (Text)
+formChat = renderBootstrap $ ()
+    <$> areq textField "Mensagem: " Nothing
 
 getChatR :: Handler Html
 getChatR = do 
@@ -42,7 +41,7 @@ postChatR :: Handler Html
 postChatR = do 
     ((result,_),_) <- runFormPost formChat
     case result of 
-        FormSuccess (username,mensagem) -> do 
+        FormSuccess (mensagem) -> do 
             username <- lookupSession "_NOME"
             now <- liftIO getCurrentTime
             runDB $ insert $ username now mensagem 
