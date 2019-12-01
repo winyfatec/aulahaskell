@@ -11,7 +11,7 @@ import Import
 import Database.Persist.Postgresql
 import Text.Lucius
 import Text.Julius
-import Form.BootstrapBasicForm
+import Yesod.Form.BootstrapBasicForm
 
 
 formUserLogin :: Form (Text,Text)
