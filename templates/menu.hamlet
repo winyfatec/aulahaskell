@@ -14,10 +14,10 @@
                         Jogar
             <li .nav-item>
                 $if (tstvar == "teste")
-                    <a .nav-link href="#{UserLoginR}">
+                    <a .nav-link href="@{UserLoginR}">
                         Logar
                 $else
-                    <a .nav-link href="#{#UserLogoutR}">
+                    <a .nav-link href="@{#UserLogoutR}">
                         Sair
 
 
