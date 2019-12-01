@@ -27,7 +27,6 @@ Atua
     ano Int
 
 
-
 User
     username Text
     UniqueUsername username
