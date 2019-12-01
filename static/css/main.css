@@ -65,10 +65,21 @@ body {
     border-radius: 10px;
 }
 
+/* JOGO */
+
+#pacman {
+  height: 470px;
+  width: 382px;
+  border-radius: 5px;
+  margin: 20px auto;
+}
 
 
 
 
+
+
+/* ??????? */
 
         .qc-cmp-button,
         .qc-cmp-button.qc-cmp-secondary-button:hover {
