@@ -15,7 +15,7 @@ import Text.Julius
 
 formUserLogin :: Form (Text,Text)
 formUserLogin  = renderBootstrap $ (,)
-    <$> areq emailField "Email" Nothing
+    <$> areq textField "Nome de usuario: " Nothing
     <*> areq passwordField "Senha" Nothing
 
 
