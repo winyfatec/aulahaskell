@@ -12,6 +12,7 @@ import Text.Julius
 --import Network.HTTP.Types.Status
 import Database.Persist.Postgresql
 import Data.Time
+import Control.Monad.IO.Class
 
 -- renderDivs
 formChat :: Form Text
@@ -42,7 +43,7 @@ postChatR = do
     case result of 
         FormSuccess chat -> do 
             username <- lookupSession "_NOME"
-            now <- getCurrentTime
+            now <- liftIO getCurrentTime
             runDB $ insert $ username now chat 
             setMessage [shamlet|
                 <div>
