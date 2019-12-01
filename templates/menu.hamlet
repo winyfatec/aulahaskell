@@ -2,7 +2,7 @@
     <div .collapse.navbar-collapse>
         <ul .navbar-nav>
             <li .nav-item>
-                <a .nav-link href="#">
+                <a .nav-link href="@{HomeR}">
                     Home
             <li .nav-item.dropdown>
                 <a .nav-link.dropdown-toggle #navbarDropdownMenuLink role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
