@@ -16,7 +16,7 @@
                 
                     <a .nav-link href="@{UserLoginR}">
                         Logar
-                    <a .nav-link href="@{#UserLogoutR}">
+                    <a .nav-link href="@{UserLogoutR}">
                         Sair
 
 
