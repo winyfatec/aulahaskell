@@ -25,7 +25,8 @@
 /elenco/#SerieId ElencoR GET
 
 
-/           HomeR       GET
+/           IndexR       GET
+/home       HomeR       GET
 /registrar  RegisterR   GET POST
 /logar      UserLoginR  GET POST
 /sair       UserLogoutR     POST

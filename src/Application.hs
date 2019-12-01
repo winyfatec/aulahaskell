@@ -45,6 +45,7 @@ import Handler.Login
 import Handler.Ator
 import Handler.Serie
 import Handler.Atua
+import Handler.Index
 import Handler.Home
 import Handler.UserRegistration
 import Handler.UserLogin

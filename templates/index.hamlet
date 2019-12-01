@@ -1,0 +1,18 @@
+<div .container>
+    <div #carouselExampleControls .carousel.slide data-ride="carousel">
+        <div .carousel-inner>
+            <div .carousel-item.active>
+                <img .d-block.w-100 src=@{StaticR slide1_jpg}>
+                <div .carousel-caption.d-none.d-md-block>
+                    <span .legenda>
+                        Em breve...
+            <div .carousel-item>
+                <img .d-block.w-100 src=@{StaticR slide2_jpg}>
+                <div .carousel-caption.d-none.d-md-block>
+                    <span .legenda>
+                        Em breve...
+        <a .carousel-control-prev href="#carouselExampleControls" role="button" data-slide="prev">
+            <span .carousel-control-prev-icon aria-hidden="true">
+        <a .carousel-control-next href="#carouselExampleControls" role="button" data-slide="next">
+            <span .carousel-control-next-icon aria-hidden="true">
+        
