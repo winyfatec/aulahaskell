@@ -71,11 +71,3 @@ postUserLogoutR :: Handler Html
 postUserLogoutR = do
     deleteSession "_NOME"
     redirect HomeR
-    
-    
-getAdminR :: Handler Html
-getAdminR = do
-    defaultLayout[whamlet|
-        <h1>
-            Bem vindo
-    |]
