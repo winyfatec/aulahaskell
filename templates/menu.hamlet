@@ -13,7 +13,7 @@
                     <a .dropdown-item href="#">
                         Jogar
             <li .nav-item>
-                $maybe nomeSess <- sess
+                
                     <a .nav-link href="@{UserLoginR}">
                         Logar
                     <a .nav-link href="@{#UserLogoutR}">
