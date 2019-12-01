@@ -49,12 +49,16 @@ body {
 .menuhaskitem a {
     color: #FFFFFF;
     text-decoration: none;
-    text-weight: bold;
+    font-weight: bold;
 }
 .menuhaskitem a:hover {
     color: #999999;
 }
 
+.formlogin {
+    width: 500px;
+    background-color: #395360;
+}
 
 
 

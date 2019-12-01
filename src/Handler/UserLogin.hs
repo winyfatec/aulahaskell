@@ -22,7 +22,7 @@ formUserLogin  = renderBootstrap $ (,)
 
 getUserLoginR :: Handler Html
 getUserLoginR = do
-    (widget,enctype) <- generateFormPost formUserLogin
+    (widget,enctype) <- generateFormPost $ renderBootstrap3 BootstrapBasicForm formUserLogin
     defaultLayout $ do
         msg <- getMessage
         setTitle "Aula Haskell Fatec :: Login"
@@ -33,18 +33,6 @@ getUserLoginR = do
         |]
         $(whamletFile "templates/login.hamlet")
         $(whamletFile "templates/footer.hamlet")
-        [whamlet|
-            $maybe mensa <- msg
-                <div>
-                    ^{mensa}
-            $nothing
-            
-            <h1>
-                Login
-            <form method=post action=@{UserLoginR}>
-                ^{widget}
-                <input type="submit" value="Entrar">
-        |]
 
    
 postUserLoginR :: Handler Html
