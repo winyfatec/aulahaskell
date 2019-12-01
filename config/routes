@@ -27,6 +27,7 @@
 
 /           IndexR       GET
 /home       HomeR       GET
+/config     UserConfigR       GET
 /registrar  RegisterR   GET POST
 /logar      UserLoginR  GET POST
 /sair       UserLogoutR     POST
