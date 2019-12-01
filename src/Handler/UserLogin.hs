@@ -19,7 +19,7 @@ formUserLogin :: Form (Text,Text)
 formUserLogin  = renderBootstrap $ (,)
     <$> areq textField nomeUsuario Nothing
     <*> areq passwordField (bfs ("Senha" :: Text)) Nothing
-    <*  bootstrapSubmit ("Logar" :: BootstrapSubmit "btn-primary")
+    --<*  bootstrapSubmit ("Logar" :: BootstrapSubmit Text)
     where nomeUsuario = withAutofocus $ withPlaceholder "Nome de usuário..." $ (bfs ("Nome de Usuário" :: Text))
 
 getUserLoginR :: Handler Html
