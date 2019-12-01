@@ -10,6 +10,7 @@ import Import
 import Database.Persist.Postgresql
 import Text.Lucius
 import Text.Julius
+import UserLogin
 
 getIndexR :: Handler Html
 getIndexR = do
