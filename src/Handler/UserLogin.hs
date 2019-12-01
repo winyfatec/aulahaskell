@@ -17,10 +17,10 @@ import Yesod.Form.Bootstrap3
 
 formUserLogin :: Form (Text,Text)
 formUserLogin  = renderBootstrap $ (,)
-    <$> areq textField (bfs ("Nome de Usuário" :: Text)) Nothing
+    <$> areq textField nomeUsuario Nothing
     <*> areq passwordField (bfs ("Senha" :: Text)) Nothing
-    <*  bootstrapSubmit "Logar" :: BootstrapSubmit Text)
-
+    <*  bootstrapSubmit (bfs ("Logar" :: BootstrapSubmit "btn btn-primary" Text))
+    where nomeUsuario = withAutofocus $ withPlaceholder "Nome de usuário..." $ (bfs ("Nome de Usuário" :: Text))
 
 getUserLoginR :: Handler Html
 getUserLoginR = do

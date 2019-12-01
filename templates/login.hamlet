@@ -8,4 +8,3 @@
         Login
     <form .formlogin method=post action=@{UserLoginR}>
         ^{widget}
-        <input .btn .btn-primary type="submit" value="Entrar">
