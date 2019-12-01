@@ -1,1 +1,11 @@
-^{widget}
+<div .pgcontainer>
+    $maybe mensa <- msg
+        <div .msg>
+            ^{mensa}
+    $nothing
+    
+    <h1>
+        Login
+    <form method=post action=@{UserLoginR}>
+        ^{widget}
+        <input type="submit" value="Entrar">
