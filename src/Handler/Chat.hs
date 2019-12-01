@@ -13,11 +13,9 @@ import Text.Julius
 import Database.Persist.Postgresql
 
 -- renderDivs
-formChat :: Form Chat 
+formChat :: Form Text
 formChat = renderBootstrap $ Chat
-    <$> areq textField "Nome: " Nothing
-    <*> areq textField "Mensagem: " Nothing
-    <*> areq textField "Mensagem: " Nothing
+    <$> areq textField "Mensagem: " Nothing
 
 getChatR :: Handler Html
 getChatR = do 
@@ -42,7 +40,8 @@ postChatR = do
     ((result,_),_) <- runFormPost formChat
     case result of 
         FormSuccess chat -> do 
-            runDB $ insert chat 
+            username <- 
+            runDB $ insert username chat now 
             setMessage [shamlet|
                 <div>
                     MENSAGEM POSTADA
