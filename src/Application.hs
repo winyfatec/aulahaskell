@@ -46,7 +46,7 @@ import Handler.Ator
 import Handler.Serie
 import Handler.Atua
 import Handler.Home
-import Handler.UserRegistration
+import Handler.p2.UserRegistration
 import Handler.UserLogin
 
 -- This line actually creates our YesodDispatch instance. It is the second half
