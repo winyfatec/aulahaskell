@@ -41,6 +41,7 @@ postChatR = do
     case result of 
         FormSuccess chat -> do 
             username <- lookupSession "_NOME"
+            now <- liftIO getCurrentTime
             runDB $ insert username chat now 
             setMessage [shamlet|
                 <div>
