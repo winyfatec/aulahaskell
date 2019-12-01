@@ -63,9 +63,9 @@ postUserLoginR = do
                                 Senha invalida
                         |]
                         redirect UserLoginR
-        _ -> redirect HomeR
+        _ -> redirect IndexR
 
 postUserLogoutR :: Handler Html
 postUserLogoutR = do
     deleteSession "_NOME"
-    redirect HomeR
+    redirect IndexR
