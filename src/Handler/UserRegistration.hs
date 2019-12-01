@@ -18,8 +18,6 @@ formRegister  = renderBootstrap $ User
     <$> areq textField "Nome de usuário: " Nothing
     <*> areq passwordField "Senha: " Nothing
 
-
-
 getRegisterR :: Handler Html
 getRegisterR = do
     (widget,enctype) <- generateFormPost formRegister
@@ -35,7 +33,7 @@ getRegisterR = do
                 Cadastro de Usuario
             <form method=post action=@{RegisterR}>
                 ^{widget}
-                <input type="submit" value="Registrar">
+                <input .btn.btn-primary type="submit" value="Registrar">
         |]
 
 

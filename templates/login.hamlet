@@ -8,4 +8,5 @@
         Login
     <form .formlogin method=post action=@{UserLoginR}>
         ^{widget}
+        <br>
         <input .btn.btn-primary type="submit" value="Enviar">
