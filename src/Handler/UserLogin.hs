@@ -19,12 +19,12 @@ formUserLogin :: Form (Text,Text)
 formUserLogin  = renderBootstrap $ (,)
     <$> areq textField "Nome de usuario: " Nothing
     <*> areq passwordField "Senha" Nothing
-
+    <*  bootstrapSubmit ("Logar" :: BootstrapSubmit Text)
 
 
 getUserLoginR :: Handler Html
 getUserLoginR = do
-    (widget,enctype) <- generateFormPost $ renderBootstrap4 BootstrapBasicForm formUserLogin
+    (widget,enctype) <- generateFormPost formUserLogin
     defaultLayout $ do
         msg <- getMessage
         setTitle "Aula Haskell Fatec :: Login"
