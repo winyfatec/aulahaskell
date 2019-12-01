@@ -41,8 +41,8 @@ postUserConfigR = do
     ((result,_),_) <- runFormPost formUserConfig
     case result of
         FormSuccess user -> do
-            sess <- lookupSession "_NOME"
-            runDB $ updateWhere [username ==. sess] [username *=. (userUsername user)]
+            sess <- lookupSession "_ID"
+            runDB $ updateWhere [uid ==. sess] [username *=. (userUsername user)]
             setMessage [shamlet|
                 <h2>
                     Dados atualizados com sucesso!
