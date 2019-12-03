@@ -10,13 +10,11 @@ import Import
 import Database.Persist.Postgresql
 import Text.Lucius
 import Text.Julius
-{-
+
 formForum :: Form Forum
 formForum = renderBootstrap $ Forum
     <$> areq textField "Titulo" Nothing
-    <*> aopt dayField "Data" Nothing
-    <*> aopt textField "username" Nothing
--}
+
 getForumR :: Handler Html
 getForumR = do
     threads <- runDB $ selectList [] [Asc ForumFkUsername]
