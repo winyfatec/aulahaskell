@@ -1,23 +1,24 @@
 <nav .navbar.navbar-expand-lg.navbar-dark.bg-dark>
     <div .collapse.navbar-collapse>
         <ul .navbar-nav>
-            <li .nav-item>
-                <a .nav-link href="@{HomeR}">
-                    Home
-            <li .nav-item>
-                <a .nav-link href="@{ForumR}">
-                    Forum
-            <li .nav-item.dropdown>
-                <a .nav-link.dropdown-toggle #navbarDropdownMenuLink role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Conta
-                <div .dropdown-menu aria-labelledby="navbarDropdown">
-                    <a .dropdown-item href="#">
-                        Configurar
-            <li .nav-item>
-                $maybe nomeSess <- sess
-                    <form action="@{UserLogoutR}" method=post>
-                        <input type="submit" value="Sair">
-                $nothing
+            $maybe nomeSess <- sess
+                <li .nav-item>
+                    <a .nav-link href="@{HomeR}">
+                        Home
+                <li .nav-item>
+                    <a .nav-link href="@{ForumR}">
+                        Forum
+                <li .nav-item.dropdown>
+                    <a .nav-link.dropdown-toggle #navbarDropdownMenuLink role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Conta
+                    <div .dropdown-menu aria-labelledby="navbarDropdown">
+                        <a .dropdown-item href="#">
+                            Configurar
+                    <li .nav-item>
+                        <form action="@{UserLogoutR}" method=post>
+                            <input type="submit" value="Sair">
+            $nothing
+                <li .nav-item>
                     <a .nav-link href="@{UserLoginR}">
                         Logar
                 
