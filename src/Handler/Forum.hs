@@ -31,8 +31,8 @@ getForumR = do
         |]
         --$(whamletFile "templates/forum.hamlet")
 
-postForumR :: Handler Html
-postForumR = do
+--postForumR :: Handler Html
+--postForumR = do
 {-    ((result,_),_) <- runFormPost formForum
     case result of
         FormSuccess Forum -> do
