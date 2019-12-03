@@ -54,8 +54,8 @@ getHomeR = do
                     <div> 
                         Bem-vindo, #{nomeSess}  
                     <div .jogo #pacman>
-                    <span .credit>
-                        <a href="https://github.com/daleharvey/pacman" target="_blank">Credito: https://github.com/daleharvey/pacman</a>
+                        <span .credit>
+                            <a href="https://github.com/daleharvey/pacman" target="_blank">Credito: https://github.com/daleharvey/pacman</a>
                 $nothing
                     
         |]

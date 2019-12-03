@@ -27,7 +27,9 @@
 
 /           IndexR       GET
 /home       HomeR       GET
-/config     UserConfigR       GET
+/forum      ForumR      GET POST
+/discussao  ThreadR      GET POST
+/config     UserConfigR GET
 /registrar  RegisterR   GET POST
 /logar      UserLoginR  GET POST
 /sair       UserLogoutR     POST

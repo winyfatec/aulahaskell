@@ -1,0 +1,23 @@
+<h1>
+    Forum
+    
+<table>
+    <thead>
+        <tr>
+            <th>
+                Titulo
+            <th>
+                Data
+    <tbody>
+        $forall Entity pid thread <- threads
+            <tr>
+                <td>
+                    #{forumTitulo thread}
+                <td>
+                    #{forumData thread}
+                    
+            
+
+<form method=post action=@{ForumR}>
+    ^{widget}
+    <input type="submit" value="Enviar">

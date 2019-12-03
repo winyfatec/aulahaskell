@@ -32,3 +32,16 @@ User
     UniqueUsername username
     password Text
     deriving Show
+    
+Forum
+    titulo Text
+    data UTCTime
+    fkUsername Text
+    deriving Show
+    
+Discussao
+    mensagem Text
+    data UTCTime
+    fkUsername Text
+    deriving Show
+    
