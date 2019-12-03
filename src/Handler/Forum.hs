@@ -13,7 +13,7 @@ import Text.Julius
 
 formForum :: Form Forum
 formForum = renderBootstrap $ Forum
-    <$> areq textField "Titulo: " Nothing
+    <$> areq textField (bfs ("Titulo" :: Text)) Nothing
     <*> aopt textField "Data" Nothing
     <*> aopt textField "username" Nothing
 
