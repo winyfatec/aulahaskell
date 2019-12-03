@@ -34,8 +34,8 @@ getForumR = do
 
 postForumR :: Handler Html
 postForumR = do
-    newsUrl <- lookupPostParam "criarnovo"
-    case newsUrl of
+    cria <- lookupPostParam "criarnovo"
+    case cria of
         Just forum -> do
             runDB $ insert forum
             setMessage [shamlet|
