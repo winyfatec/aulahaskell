@@ -9,7 +9,12 @@
             <th>
                 Data
     <tbody>
-                    
+        $forall Entity pid thread <- threads
+            <tr>
+                <td>
+                    #{ForumTitulo thread}
+                <td>
+                    #{ForumData thread}            
             
 
 <form method=post action=@{ForumR}>
