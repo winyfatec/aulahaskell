@@ -11,11 +11,13 @@ import Database.Persist.Postgresql
 import Text.Lucius
 import Text.Julius
 
-formThread :: Form Thread
-formThread = renderBootstrap $ Thread
+{-
+formThread :: Form Discussao
+formThread = renderBootstrap $ Discussao
     <$> areq textField "Mensagem: " Nothing
     <*> aopt hiddenField "data" Nothing
     <*> aopt hiddenField "username" Nothing
+-}
 
 getThreadR :: Handler Html
 getThreadR = do
@@ -28,7 +30,7 @@ getThreadR = do
             $nothing
                 
         |]
-
+{-
 postThreadR :: Handler Html
 postThreadR = do
     ((result,_),_) <- runFormPost formThread
@@ -42,7 +44,7 @@ postThreadR = do
             redirect ThreadR
         _ -> redirect HomeR
 
-    
+    -}
 
     
 
