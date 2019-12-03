@@ -11,10 +11,10 @@ import Database.Persist.Postgresql
 import Text.Lucius
 import Text.Julius
 
---formForum :: Form (Text,Text)
---formForum = renderBootstrap $ (,)
---    <$> areq textField "Titulo: " Nothing
---    <*> aopt hiddenField "username" Nothing
+formForum :: Form (Text)
+formForum = renderBootstrap
+    <$> areq textField "Titulo: " Nothing
+    <*> aopt hiddenField "username" Nothing
 
 getForumR :: Handler Html
 getForumR = do
@@ -33,7 +33,7 @@ getForumR = do
 
 postForumR :: Handler Html
 postForumR = do
-    ((result,_),_) <- runFormPost Form
+    ((result,_),_) <- runFormPost formForum
     case result of
         FormSuccess (titulo) -> do
             hora <- currentTime
