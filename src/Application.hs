@@ -48,6 +48,7 @@ import Handler.Atua
 import Handler.Index
 import Handler.Home
 import Handler.Forum
+import Handler.Thread
 import Handler.UserRegistration
 import Handler.UserLogin
 import Handler.UserConfig
