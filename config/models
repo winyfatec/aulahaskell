@@ -41,7 +41,7 @@ Forum
     
 Discussao
     mensagem Text
-    data UTCTime
+    data Text
     fkUsername Text
     deriving Show
     
