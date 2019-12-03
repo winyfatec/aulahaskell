@@ -35,8 +35,6 @@ User
     
 Forum
     titulo Text
-    data Text
-    fkUsername Text
     deriving Show
     
 Discussao
