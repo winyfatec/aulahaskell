@@ -35,13 +35,13 @@ User
     
 Forum
     titulo Text
-    data Text
+    data Day
     fkUsername Text
     deriving Show
     
 Discussao
     mensagem Text
-    data Text
+    data Day
     fkUsername Text
     deriving Show
     
