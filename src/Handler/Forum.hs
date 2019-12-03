@@ -12,7 +12,7 @@ import Text.Lucius
 import Text.Julius
 
 formForum :: Form (Text)
-formForum = renderBootstrap
+formForum = renderBootstrap $ ()
     <$> areq textField "Titulo: " Nothing
     <*> aopt hiddenField "username" Nothing
 
