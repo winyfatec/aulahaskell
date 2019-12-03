@@ -34,10 +34,10 @@ getForumR = do
 
 postForumR :: Handler Html
 postForumR = do
-    ((result,_),_) <- runFormPostNoNonce formForum
-    case result of
-        FormSuccess forum -> do
-            runDB $ insert $ forum
+    newsUrl <- lookupPostParam "criarnovo"
+    case newsUrl of
+        Just forum -> do
+            runDB $ insert $ forum 
             setMessage [shamlet|
                 <h2>
                     Thread criada com sucesso!

@@ -17,5 +17,5 @@
             
 
 <form method=post action=@{ForumR}>
-    <textarea></textarea>
-    <input type="submit" value="Enviar">
+    <input type="text" name="titulo">
+    <input type="submit" name="criarnovo" value="Enviar">
