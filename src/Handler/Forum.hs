@@ -11,15 +11,15 @@ import Database.Persist.Postgresql
 import Text.Lucius
 import Text.Julius
 
-formForum :: Form (Text,Text)
-formForum = renderBootstrap $ (,)
-    <$> areq textField "Titulo: " Nothing
-    <*> aopt hiddenField "username" Nothing
+--formForum :: Form (Text,Text)
+--formForum = renderBootstrap $ (,)
+--    <$> areq textField "Titulo: " Nothing
+--    <*> aopt hiddenField "username" Nothing
 
 getForumR :: Handler Html
 getForumR = do
-    threads <- runDB $ selectList [] [Asc ForumFkUsername]
-    (widget,enctype) <- generateFormPost formForum
+    --threads <- runDB $ selectList [] [Asc ForumFkUsername]
+--    (widget,enctype) <- generateFormPost formForum
     defaultLayout $ do
         msg <- getMessage
         [whamlet|
@@ -29,7 +29,7 @@ getForumR = do
             $nothing
                 
         |]
-        $(whamletFile "templates/forum.hamlet")
+        --$(whamletFile "templates/forum.hamlet")
 
 postForumR :: Handler Html
 postForumR = do
