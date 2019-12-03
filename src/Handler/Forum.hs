@@ -13,9 +13,9 @@ import Text.Julius
 
 formForum :: Form Forum
 formForum = renderBootstrap $ Forum
-    <$> areq textField "Titulo: "
-    <*> aopt textField "Data"
-    <*> aopt textField "username"
+    <$> areq textField "Titulo: " Nothing
+    <*> aopt textField "Data" Nothing
+    <*> aopt textField "username" Nothing
 
 getForumR :: Handler Html
 getForumR = do
