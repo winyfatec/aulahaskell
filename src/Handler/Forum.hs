@@ -31,9 +31,9 @@ getForumR = do
         |]
         $(whamletFile "templates/forum.hamlet")
 
---postForumR :: Handler Html
---postForumR = do
-{-    ((result,_),_) <- runFormPost formForum
+postForumR :: Handler Html
+postForumR = do
+    ((result,_),_) <- runFormPost formForum
     case result of
         FormSuccess Forum -> do
             runDB $ insert Forum
@@ -43,7 +43,7 @@ getForumR = do
             |]
             redirect ForumR
         _ -> redirect HomeR
--}
+
     
 
     
