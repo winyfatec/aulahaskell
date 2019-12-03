@@ -19,5 +19,5 @@
             
 
 <form method=post action=@{ForumR}>
-    ^{widget}
+    <textarea></textarea>
     <input type="submit" value="Enviar">
