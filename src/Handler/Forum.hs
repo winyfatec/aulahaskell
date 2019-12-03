@@ -11,8 +11,8 @@ import Database.Persist.Postgresql
 import Text.Lucius
 import Text.Julius
 
-formForum :: Form (Text)
-formForum = renderBootstrap $ ()
+formForum :: Form Forum
+formForum = renderBootstrap $ Forum
     <$> areq textField "Titulo: " Nothing
     <*> aopt textField "username" Nothing
     <*> aopt textField "Data" Nothing
