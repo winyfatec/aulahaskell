@@ -18,7 +18,7 @@ import Text.Julius
 
 getForumR :: Handler Html
 getForumR = do
-    --threads <- runDB $ selectList [] [Asc ForumFkUsername]
+    threads <- runDB $ selectList [] [Asc ForumFkUsername]
 --    (widget,enctype) <- generateFormPost formForum
     defaultLayout $ do
         msg <- getMessage
