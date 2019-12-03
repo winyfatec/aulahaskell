@@ -12,9 +12,8 @@
         $forall Entity pid thread <- threads
             <tr>
                 <td>
-                    #{ForumTitulo thread}
-                <td>
-                    #{ForumData thread}            
+                    #{forumTitulo thread}
+                <td>        
             
 
 <form method=post action=@{ForumR}>
