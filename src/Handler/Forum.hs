@@ -37,7 +37,7 @@ postForumR = do
     newsUrl <- lookupPostParam "criarnovo"
     case newsUrl of
         Just forum -> do
-            runDB $ insert $ forum
+            runDB $ insert forum
             setMessage [shamlet|
                 <h2>
                     Thread criada com sucesso!
