@@ -48,15 +48,5 @@ getHomeR = do
             <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha256-0rguYS0qgS6L4qVzANq4kjxPLtvnp5nn2nB5G1lWRv4=" crossorigin="anonymous">
         |]
         $(whamletFile "templates/menu.hamlet")
-        [whamlet|
-            <div .container>
-                $maybe nomeSess <- sess
-                    <div> 
-                        Bem-vindo, #{nomeSess}  
-                    <div .jogo #pacman>
-                        <span .credit>
-                            <a href="https://github.com/daleharvey/pacman" target="_blank">Credito: https://github.com/daleharvey/pacman</a>
-                $nothing
-                    
-        |]
+        $(whamletFile "templates/home.hamlet")
         $(whamletFile "templates/footer.hamlet")
