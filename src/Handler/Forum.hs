@@ -18,7 +18,7 @@ formForum = renderBootstrap $ (,)
 
 getForumR :: Handler Html
 getForumR = do
-    threads <- runDB $ selectList [] [Asc ForumUsername]
+    threads <- runDB $ selectList [] [Asc ForumFkUsername]
     (widget,enctype) <- generateFormPost formForum
     defaultLayout $ do
         msg <- getMessage
