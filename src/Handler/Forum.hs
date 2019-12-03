@@ -33,7 +33,7 @@ getForumR = do
 
 postForumR :: Handler Html
 postForumR = do
-    ((result,_),_) <- runFormPost formForum
+    ((result,_),_) <- runFormPost Form
     case result of
         FormSuccess Forum -> do
             runDB $ insert Forum
