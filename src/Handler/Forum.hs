@@ -27,7 +27,12 @@ getForumR = do
                 <div>
                     ^{mensa}
             $nothing
-                
+                $forall Entity pid thread <- threads
+                    <tr>
+                        <td>
+                            #{forumTitulo thread}
+                        <td>
+                            #{forumData thread}
         |]
         $(whamletFile "templates/forum.hamlet")
 
