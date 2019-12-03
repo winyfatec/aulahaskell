@@ -35,8 +35,9 @@ postForumR :: Handler Html
 postForumR = do
     ((result,_),_) <- runFormPost Form
     case result of
-        FormSuccess Forum -> do
-            runDB $ insert Forum
+        FormSuccess (titulo) -> do
+            hora <- currentTime
+            runDB $ insert $ Forum titulo hora "teste"
             setMessage [shamlet|
                 <h2>
                     Thread criada com sucesso!
