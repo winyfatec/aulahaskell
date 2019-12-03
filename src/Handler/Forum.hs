@@ -29,7 +29,7 @@ getForumR = do
             $nothing
                 
         |]
-        -- $(whamletFile "templates/forum.hamlet")
+        $(whamletFile "templates/forum.hamlet")
 
 --postForumR :: Handler Html
 --postForumR = do
