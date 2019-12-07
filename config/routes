@@ -5,13 +5,9 @@
 
 /           IndexR      GET
 /home       HomeR       GET
-<<<<<<< HEAD
-/forum      ForumR       GET 
-/thread     ThreadR      GET 
-=======
-/blog       BlogR       GET 
+/forum      ForumR      GET 
+/thread     ThreadR     GET 
 /post       BPostR      GET 
->>>>>>> 6a5480037d84ad9640f82929cc1135d6f54611ed
 /config     UserConfigR GET
 /registrar  RegisterR   GET POST
 /login      LoginR      GET POST
