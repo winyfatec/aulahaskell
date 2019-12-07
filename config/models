@@ -6,6 +6,6 @@ User
     
 Forum
     titulo Text
-    dt UTCTime default=CURRENT_TIME
+    dt Text
     fkUsername Text
     deriving Show
