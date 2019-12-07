@@ -17,8 +17,8 @@ formForum = renderBootstrap $ Forum
     <$> areq textField "Titulo" Nothing
 -}
 
-formForum :: Form Forum 
-formForum = renderDivs $ Forum
+formForum :: Form Text 
+formForum = renderDivs $ 
     <$> areq textField "Titulo" Nothing
 
 
