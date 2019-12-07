@@ -1,45 +1,11 @@
-Usuario
-    nome Text
-    email Text
-    senha Text
-    UniqueEmailAdm email
-    deriving Show
-
-Produto
-    nome Text
-    valor Double
-    deriving Show
-    
-Serie
-    nome Text
-    ano Int
-    pais Text
-    deriving Show
-
-Ator
-    nome Text
-    ano Day
-    deriving Show
-
-Atua
-    serieid SerieId
-    atorid AtorId
-    ano Int
-    
-
 User
     username Text
     UniqueUsername username
     password Text
     deriving Show
     
-Forum
+Blog
     titulo Text
-    deriving Show
-    
-Discussao
-    mensagem Text
-    data Text
+    texto Text
     fkUsername Text
     deriving Show
-    

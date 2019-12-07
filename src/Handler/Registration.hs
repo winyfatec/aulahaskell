@@ -4,14 +4,13 @@
 {-# LANGUAGE MultiParamTypeClasses #-}
 {-# LANGUAGE QuasiQuotes #-}
 {-# LANGUAGE TypeFamilies #-}
-module Handler.UserRegistration where
+module Handler.Registration where
 
 import Import
 --import Network.HTTP.Types.Status
 import Database.Persist.Postgresql
 import Text.Lucius
 import Text.Julius
-
 
 formRegister :: Form User
 formRegister  = renderBootstrap $ User
