@@ -6,7 +6,7 @@
     
     <h1>
         Login
-    <form .formlogin method=post action=@{UserLoginR}>
+    <form .formlogin method=post action=@{LoginR}>
         ^{widget}
         <br>
         <input .btn.btn-primary type="submit" value="Enviar">
