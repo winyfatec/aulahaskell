@@ -22,15 +22,6 @@ formForum = renderDivs $ (
     <$> areq textField "Titulo" Nothing
 -}  
 
-formForum = do
-    (titulo, tituloField) <- textField "Titulo" Nothing
-    (dt, dateField) <- textField "Data" Nothing
-    (username, usernameField) <- textField "Username" Nothing
-    return (Forum <$> titulo <*> dt <*> username, [$hamlet|
-        Teste ^fiInput.tituoField^ teste dois ^fiInput.dateField^  teste tres ^fiInput.usernameField^
-    |])
-
-
 
 getForumR :: Handler Html
 getForumR = do
@@ -46,7 +37,11 @@ getForumR = do
                 
         |]
         $(whamletFile "templates/forum.hamlet")
-{-
+        
+        
+        
+        
+   
 postForumR :: Handler Html
 postForumR = do
     cria <- lookupPostParam "criarnovo"
@@ -59,7 +54,6 @@ postForumR = do
             |]
             redirect ForumR
         _ -> redirect HomeR
--}
-    
+
 
 
