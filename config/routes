@@ -27,7 +27,7 @@
 
 /           IndexR       GET
 /home       HomeR       GET
-/forum      ForumR      GET POST
+/forum      ForumR      GET 
 /discussao  ThreadR      GET 
 /config     UserConfigR GET
 /registrar  RegisterR   GET POST
