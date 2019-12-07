@@ -7,6 +7,7 @@
 module Handler.Forum where
 
 import Import
+import Database.Persist
 import Database.Persist.Postgresql
 import Text.Lucius
 import Text.Julius
