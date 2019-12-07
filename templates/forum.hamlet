@@ -8,12 +8,17 @@
                 Titulo
             <th>
                 Data
+            <th>
+                usuario
     <tbody>
         $forall Entity pid thread <- threads
             <tr>
                 <td>
                     #{forumTitulo thread}
-                <td>        
+                <td>
+                    #{forumCriado}
+                <td>
+                    #{forumFkUsername}
             
 
 <form method=post action=@{ForumR}>
