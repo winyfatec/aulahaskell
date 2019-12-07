@@ -10,6 +10,7 @@ import Import
 import Database.Persist.Postgresql
 import Text.Lucius
 import Text.Julius
+import Data.Time
 
 {-
 formForum :: Form Forum 
@@ -44,10 +45,12 @@ getForumR = do
    
 postForumR :: Handler Html
 postForumR = do
-    cria <- lookupPostParam "criarnovo"
+    cria <- lookupPostParam "titulo"
+    dt <- liftIO getCurrentTime
+    username <- lookupSession "_NOME"
     case cria of
         Just forum -> do
-            runDB $ insert forum
+            runDB $ insert $ Forum titulo dt username
             setMessage [shamlet|
                 <h2>
                     Thread criada com sucesso!
