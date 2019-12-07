@@ -6,6 +6,6 @@ User
     
 Forum
     titulo Text
-    criado UTCTime default=CURRENT_TIME
     fkUsername Text
+    criado UTCTime default=CURRENT_TIME
     deriving Show
