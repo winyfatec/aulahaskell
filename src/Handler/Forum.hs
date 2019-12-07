@@ -21,6 +21,7 @@ formForum :: Form Text
 formForum = renderDivs $ (
     <$> areq textField "Titulo" Nothing
 -}  
+
 formForum :: Form Html
 formForum = do
     (titulo, tituloField) <- textField "Titulo" Nothing
