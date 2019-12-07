@@ -13,6 +13,7 @@ import Text.Lucius
 import Text.Julius
 import Data.Time
 import Control.Monad.IO.Class
+import Data.Time.Format
 
 {-
 formForum :: Form Forum 
@@ -25,6 +26,9 @@ formForum = renderDivs $ (
     <$> areq textField "Titulo" Nothing
 -}  
 
+
+dateFormat :: UTCTime -> String
+dateFormat = formatTime defaultTimeLocale "%F"
 
 getForumR :: Handler Html
 getForumR = do
