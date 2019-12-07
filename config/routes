@@ -5,7 +5,7 @@
 
 /           IndexR      GET
 /home       HomeR       GET
-/forum      ForumR      GET 
+/forum      ForumR      GET POST
 /thread     ThreadR     GET 
 /config     UserConfigR GET
 /registrar  RegisterR   GET POST
