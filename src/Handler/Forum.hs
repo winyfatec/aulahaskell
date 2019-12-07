@@ -52,7 +52,7 @@ postForumR = do
     username <- lookupSession "_NOME"
     case cria of
         Just titulo -> do
-            runDB $ insert $ Forum Just titulo (getCurrentTime) username
+            runDB $ insert $ Forum Just titulo Nothing username
             setMessage [shamlet|
                 <h2>
                     Thread criada com sucesso!
