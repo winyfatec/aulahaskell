@@ -29,7 +29,7 @@ getForumR = do
                 
         |]
         $(whamletFile "templates/forum.hamlet")
-
+{-
 postForumR :: Handler Html
 postForumR = do
     cria <- lookupPostParam "criarnovo"
@@ -42,9 +42,7 @@ postForumR = do
             |]
             redirect ForumR
         _ -> redirect HomeR
-
-    
-
+-}
     
 
 
