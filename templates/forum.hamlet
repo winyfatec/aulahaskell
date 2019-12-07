@@ -1,7 +1,7 @@
 <h1>
     Forum
     
-<table>
+<table .forum>
     <thead>
         <tr>
             <th>
