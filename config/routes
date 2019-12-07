@@ -3,6 +3,8 @@
 /favicon.ico FaviconR GET
 /robots.txt RobotsR GET
 
+/admin      AdminR      GET
+
 /           IndexR      GET
 /home       HomeR       GET
 /forum      ForumR      GET 
