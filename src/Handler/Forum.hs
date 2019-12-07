@@ -28,7 +28,7 @@ formForum = renderDivs $ (
 
 -- $F =  %Y-%m-%d
 dateFormat :: UTCTime -> String
-dateFormat = formatTime defaultTimeLocale "%d/$m/$Y"
+dateFormat = formatTime defaultTimeLocale "%d/%m/%Y"
 
 getForumR :: Handler Html
 getForumR = do
