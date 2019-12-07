@@ -27,7 +27,10 @@ formForum = do
     (titulo, tituloField) <- textField "Titulo" Nothing
     (dt, dateField) <- textField "Data" Nothing
     (username, usernameField) <- textField "Username" Nothing
-    return (Forum <$> titulo <*> dt <*> username, [$hamlet| Teste ^fiInput.tituoField^ teste dois ^fiInput.dateField^  teste tres ^fiInput.usernameField^ |])
+    return (Forum <$> titulo <*> dt <*> username, 
+        [$hamlet|
+            Teste ^fiInput.tituoField^ teste dois ^fiInput.dateField^  teste tres ^fiInput.usernameField^
+        |])
 
 
 
