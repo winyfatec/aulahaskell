@@ -11,13 +11,21 @@ import Database.Persist.Postgresql
 import Text.Lucius
 import Text.Julius
 
-formForum :: Form Forum
+{-
+formForum :: Form Forum 
 formForum = renderBootstrap $ Forum
     <$> areq textField "Titulo" Nothing
+-}
+
+formForum :: Form Forum 
+formForum = renderDivs $ Fornecedor <$>
+    areq textField "Titulo" Nothing 
+
+
 
 getForumR :: Handler Html
 getForumR = do
-    --threads <- runDB $ selectList [] [Asc ForumTiulo]
+    threads <- runDB $ selectList [] [Asc ForumTitulo]
 --    (widget,enctype) <- generateFormPost formForum
     defaultLayout $ do
         msg <- getMessage
