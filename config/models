@@ -6,6 +6,6 @@ User
     
 Forum
     titulo Text
-    dt UTCTime
+    dt day
     fkUsername Text
     deriving Show
