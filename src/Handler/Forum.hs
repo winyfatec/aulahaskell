@@ -30,7 +30,8 @@ formForum = do
     return (Forum <$> titulo <*> dt <*> username, 
         [$hamlet|
             Teste ^fiInput.tituoField^ teste dois ^fiInput.dateField^  teste tres ^fiInput.usernameField^
-        |])
+        |]
+    )
 
 
 
