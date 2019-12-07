@@ -20,6 +20,8 @@ formForum = renderBootstrap $ Forum
 formForum :: Form Forum 
 formForum = renderDivs $ Forum <$>
     areq textField "Titulo" Nothing 
+    aopt hiddenField "User" Nothing 
+    aopt hiddenField "Data" Nothing 
 
 
 
