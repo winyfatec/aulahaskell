@@ -1,8 +1,0 @@
-<h1>
-    PAGINA 2
-
-<div>
-    UMA DIV #{tstvar}
-
-<a href=@{HomeR}>
-    Voltar

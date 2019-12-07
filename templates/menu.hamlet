@@ -15,11 +15,11 @@
                         <a .dropdown-item href="#">
                             Configurar
                     <li .nav-item>
-                        <form action="@{UserLogoutR}" method=post>
+                        <form action="@{LogoutR}" method=post>
                             <input type="submit" value="Sair">
             $nothing
                 <li .nav-item>
-                    <a .nav-link href="@{UserLoginR}">
+                    <a .nav-link href="@{LoginR}">
                         Logar
                 
 
