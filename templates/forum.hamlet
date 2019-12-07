@@ -16,7 +16,7 @@
                 <td>
                     #{forumTitulo thread}
                 <td>
-                    #{forumCriado thread}
+                    #{dateFormat $ forumCriado thread}
                 <td>
                     #{forumFkUsername thread}
             
