@@ -48,7 +48,7 @@ getForumR = do
 postForumR :: Handler Html
 postForumR = do
     cria <- lookupPostParam "titulo"
-    criado <- liftIO getCurrentTime
+    criado <- (liftIO getCurrentTime)
     username <- lookupSession "_NOME"
     case cria of
         Just titulo -> do
