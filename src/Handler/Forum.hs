@@ -49,7 +49,7 @@ postForumR = do
     dt <- liftIO getCurrentTime
     username <- lookupSession "_NOME"
     case cria of
-        Just forum -> do
+        Just titulo -> do
             runDB $ insert $ Forum titulo dt username
             setMessage [shamlet|
                 <h2>
