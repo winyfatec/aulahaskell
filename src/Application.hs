@@ -43,8 +43,8 @@ import Handler.Index
 import Handler.Home
 import Handler.Forum
 import Handler.Thread
-import Handler.UserRegistration
-import Handler.UserLogin
+import Handler.Registration
+import Handler.Login
 import Handler.UserConfig
 
 -- This line actually creates our YesodDispatch instance. It is the second half
