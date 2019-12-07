@@ -26,9 +26,9 @@ formForum = renderDivs $ (
     <$> areq textField "Titulo" Nothing
 -}  
 
--- $F =  %Y-%m-%d
+-- Formata a data e a hora
 dateFormat :: UTCTime -> String
-dateFormat = formatTime defaultTimeLocale "%d/%m/%Y"
+dateFormat = formatTime defaultTimeLocale "%d/%m/%Y %H:%M:%S"
 
 getForumR :: Handler Html
 getForumR = do
