@@ -4,8 +4,8 @@ User
     password Text
     deriving Show
     
-Blog
+Forum
     titulo Text
-    texto Text
+    dt Text
     fkUsername Text
     deriving Show

@@ -16,10 +16,19 @@ formForum :: Form Forum
 formForum = renderBootstrap $ Forum
     <$> areq textField "Titulo" Nothing
 -}
-
+{-
 formForum :: Form Text 
-formForum = renderDivs $ 
+formForum = renderDivs $ (
     <$> areq textField "Titulo" Nothing
+-}  
+formForum :: Form Html
+formForum = do
+    (titulo, tituloField) <- textField "Titulo" Nothing
+    (dt, dateField) <- textField "Data" Nothing
+    (username, usernameField) <- textField "Username" Nothing
+    return (Forum <$> titulo <*> dt <*> username, [$hamlet|
+        Teste ^fiInput.tituoField^ teste dois ^fiInput.dateField^  teste tres ^fiInput.usernameField^
+    |])
 
 
 
