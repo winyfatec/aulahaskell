@@ -11,6 +11,7 @@ import Database.Persist.Postgresql
 import Text.Lucius
 import Text.Julius
 import Data.Time
+import Control.Monad.IO.Class
 
 {-
 formForum :: Form Forum 
@@ -50,7 +51,7 @@ postForumR = do
     username <- lookupSession "_NOME"
     case cria of
         Just titulo -> do
-            runDB $ insert $ Forum Just titulo Nothing username
+            runDB $ insert $ Forum Just titulo dt username
             setMessage [shamlet|
                 <h2>
                     Thread criada com sucesso!
