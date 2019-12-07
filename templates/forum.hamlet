@@ -9,10 +9,10 @@
             <th>
                 Data
     <tbody>
-        $forall Entity pid thread <- threads
+        forall Entity pid thread <- threads
             <tr>
                 <td>
-                    #{forumTitulo thread}
+                    {forumTitulo thread}
                 <td>        
             
 
