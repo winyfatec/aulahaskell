@@ -41,13 +41,10 @@ import Handler.Common
 import Handler.Login
 import Handler.Index
 import Handler.Home
-<<<<<<< HEAD
 import Handler.Forum
-=======
-import Handler.Blog
->>>>>>> 6a5480037d84ad9640f82929cc1135d6f54611ed
-import Handler.Registration
-import Handler.Login
+import Handler.Thread
+import Handler.UserRegistration
+import Handler.UserLogin
 import Handler.UserConfig
 
 -- This line actually creates our YesodDispatch instance. It is the second half
