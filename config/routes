@@ -3,13 +3,10 @@
 /favicon.ico FaviconR GET
 /robots.txt RobotsR GET
 
-/admin      AdminR      GET
-
 /           IndexR      GET
 /home       HomeR       GET
 /forum      ForumR      GET 
 /thread     ThreadR     GET 
-/post       BPostR      GET 
 /config     UserConfigR GET
 /registrar  RegisterR   GET POST
 /login      LoginR      GET POST

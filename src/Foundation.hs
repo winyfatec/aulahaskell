@@ -29,7 +29,6 @@ instance Yesod App where
     isAuthorized RegisterR _ = return Authorized
     isAuthorized LoginR _ = return Authorized
     isAuthorized (StaticR _) _ = return Authorized
-    isAuthorized AdminR _ = isRoot
     isAuthorized _ _ = isUsuario
        
 isUsuario :: Handler AuthResult
@@ -38,16 +37,6 @@ isUsuario = do
     case sess of
         Nothing -> return AuthenticationRequired
         (Just _) -> return Authorized 
-        
-isRoot :: Handler AuthResult
-isRoot = do
-    sess <- lookupSession "_NOME"
-    case sess of
-        Nothing -> return AuthenticationRequired
-        (Just "Root") -> return Authorized
-        (Just _) -> return (Unauthorized "Voce nao e admin") 
-        
-
  
 
 type Form a = Html -> MForm Handler (FormResult a, Widget)
