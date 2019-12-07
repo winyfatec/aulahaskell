@@ -17,7 +17,7 @@
                     #{forumTitulo thread}
                 <td>
                     #{dateFormat $ forumCriado thread}
-                    #{defaultTimeLocale "%F" $ forumCriado thread}
+                    #{show $ forumCriado thread}
                 <td>
                     #{forumFkUsername thread}
             
