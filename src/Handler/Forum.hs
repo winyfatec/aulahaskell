@@ -18,7 +18,7 @@ formForum = renderBootstrap $ Forum
 -}
 
 formForum :: Form Forum 
-formForum = renderDivs $ Fornecedor <$>
+formForum = renderDivs $ Forum <$>
     areq textField "Titulo" Nothing 
 
 
