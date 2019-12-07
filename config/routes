@@ -3,34 +3,12 @@
 /favicon.ico FaviconR GET
 /robots.txt RobotsR GET
 
-/aula       AulaR       GET
-/p1         Page1R      GET
-/p2         Page2R      GET
-
-/produto    ProdutoR    GET POST
-/listar     ListProdR   GET
-/produto/#ProdutoId/apagar  ApagarProdR POST
-
-
-/cadastro   UsuarioR    GET POST
-/login      LoginR      GET POST
-/logout     LogoutR         POST
-
-/admin      AdminR      GET
-
-
-/ator       AtorR       GET POST
-/serie      SerieR      GET POST
-/atua       AtuaR       GET POST
-/elenco/#SerieId ElencoR GET
-
-
-/           IndexR       GET
+/           IndexR      GET
 /home       HomeR       GET
-/forum      ForumR      GET 
-/discussao  ThreadR      GET 
+/forum      ForumR       GET 
+/thread     ThreadR      GET 
 /config     UserConfigR GET
 /registrar  RegisterR   GET POST
-/logar      UserLoginR  GET POST
-/sair       UserLogoutR     POST
+/login      LoginR      GET POST
+/logout     LogoutR     POST
 
