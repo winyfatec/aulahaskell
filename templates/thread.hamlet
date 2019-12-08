@@ -25,6 +25,7 @@
         <tfoot>
             <tr>
                 <td colspan=2 .ftable>
-                    <form method=post action=@{ForumR}>
+                    <form method=post action=@{MensagemR}>
+                        <input type="hidden" name="forumid" value="#{ForumId thread}">
                         <input type="text" name="mensagen" .form-control>
-                        <input type="submit" name="criarnovo" value="Postar" .btn.btn-primary>
+                        <input type="submit" name="postar" value="Postar" .btn.btn-primary>
