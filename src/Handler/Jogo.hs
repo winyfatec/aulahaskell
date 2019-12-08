@@ -28,8 +28,10 @@ getJogoR jid = do
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
             <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha256-0rguYS0qgS6L4qVzANq4kjxPLtvnp5nn2nB5G1lWRv4=" crossorigin="anonymous">
         |]
+        
         let jogo = case jid of
                         1 -> StaticR jogos_atividadeCorredor_swf
+                        
         $(whamletFile "templates/menu.hamlet")
         $(whamletFile "templates/jogo.hamlet")
         $(whamletFile "templates/footer.hamlet")
