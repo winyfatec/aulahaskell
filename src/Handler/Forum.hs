@@ -61,7 +61,6 @@ postForumR = do
     Just userId <- lookupSession "_USUARIO"
     Just usuario <- runDB $ get404 (toSqlKey (read (Data.Text.unpack userId :: Int64)))
     -- Just uid <- runDB $ get (UserId usuario)
-    t <- read userId :: Int64
     criado <- (liftIO getCurrentTime)
     case cria of
         Just titulo -> do
