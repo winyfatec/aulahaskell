@@ -15,8 +15,8 @@
                     <div .dropdown-menu aria-labelledby="navbarDropdown">
                         <a .dropdown-item href="#">
                             Configurar
-                    <li .nav-item>
-                        <a href="@{LogoutR}" class="nav-link " data-value="sair">Sair
+                <li .nav-item>
+                    <a href="@{LogoutR}" class="nav-link " data-value="sair">Sair
             $nothing
                 <li .nav-item #logarlink>
                     <a .nav-link href="@{LoginR}">
