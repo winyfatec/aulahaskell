@@ -84,7 +84,7 @@ getThreadR tid = do
         |]
         msg <- getMessage
         case thd of
-            Just(Entity tid thread) -> do
+            Just(Entity _ thread) -> do
                 $(whamletFile "templates/menu.hamlet")
                 $(whamletFile "templates/thread.hamlet")
                 $(whamletFile "templates/footer.hamlet")
