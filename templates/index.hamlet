@@ -2,15 +2,21 @@
     <div #carouselExampleControls .carousel.slide data-ride="carousel">
         <div .carousel-inner>
             <div .carousel-item.active>
-                <img .d-block.w-100 src=@{StaticR slide1_jpg}>
+                <img .d-block.w-100 src=@{StaticR slide1_png}>
                 <div .carousel-caption.d-none.d-md-block>
                     <span .legenda>
-                        Em breve...
+                        Lute!
             <div .carousel-item>
-                <img .d-block.w-100 src=@{StaticR slide2_jpg}>
+                <img .d-block.w-100 src=@{StaticR slide2_png}>
                 <div .carousel-caption.d-none.d-md-block>
                     <span .legenda>
-                        Em breve...
+                        Acerte o alvo!
+            <div .carousel-item>
+                <img .d-block.w-100 src=@{StaticR slide3_png}>
+                <div .carousel-caption.d-none.d-md-block>
+                    <span .legenda>
+                        Tente escapar!
+            
         <a .carousel-control-prev href="#carouselExampleControls" role="button" data-slide="prev">
             <span .carousel-control-prev-icon aria-hidden="true">
         <a .carousel-control-next href="#carouselExampleControls" role="button" data-slide="next">
