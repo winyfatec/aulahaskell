@@ -58,7 +58,7 @@ postLoginR = do
                     redirect LoginR
                 Just(Entity uid usr) -> do
                     if(userPassword usr == senha) then do
-                        setSession "_USUARIO" (userUsername usr)
+                        setSession "_NOME" (userUsername usr)
                         redirect HomeR
                     else do
                         setMessage[shamlet|
