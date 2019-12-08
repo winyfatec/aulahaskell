@@ -30,7 +30,7 @@ getJogoR jid = do
         |]
         
         let jogos = case jid of
-                        1 -> StaticR jogos_atividadeCorredor_swf
+                        1 -> show $ StaticR jogos_atividadeCorredor_swf
                         
         $(whamletFile "templates/menu.hamlet")
         $(whamletFile "templates/jogo.hamlet")
