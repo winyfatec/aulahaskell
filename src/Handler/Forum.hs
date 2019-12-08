@@ -35,7 +35,7 @@ dateFormat = formatTime defaultTimeLocale "%d/%m/%Y %H:%M:%S"
 getForumR :: Handler Html
 getForumR = do
     threads <- runDB $ selectList [] [Desc ForumCriado]
-    sess <- lookupSession "_USUARIO"
+    sess <- lookupSession "_NOME"
 --    (widget,enctype) <- generateFormPost formForum
     defaultLayout $ do
         setTitle "Aula Haskell Fatec :: Forum"
@@ -75,7 +75,7 @@ postForumR = do
 
 getThreadR :: ForumId -> Handler Html
 getThreadR tid = do
-    sess <- lookupSession "_USUARIO"
+    sess <- lookupSession "_NOME"
     let sql = "SELECT ??,??,?? FROM mensagem INNER JOIN forum ON mensagem.fk_Forum_Id = forum.id INNER JOIN usuario ON mensagem.fk_User_Id = usuario.id WHERE forum.id = ?"
     thread <- runDB $ get404 tid
     mensagens <- runDB $ rawSql sql [toPersistValue tid] :: Handler [(Entity Forum,Entity Mensagem,Entity Usuario)]
