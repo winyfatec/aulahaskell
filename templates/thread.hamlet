@@ -11,6 +11,7 @@
         <thead .thread-dark>
             <tr>
                 <th>
+                    *
                 <th>
                     Mensagem
         <tbody>
