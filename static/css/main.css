@@ -87,6 +87,7 @@ h1 {
     float: right;
     clear: both;
     background-color: #000000;
+    display:block;
 }
 
 /* JOGO */
