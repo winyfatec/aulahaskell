@@ -9,7 +9,7 @@
             <th>
                 Data
             <th>
-                usuario
+                Usuario
     <tbody>
         $forall Entity pid thread <- threads
             <tr>
