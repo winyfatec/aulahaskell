@@ -24,7 +24,7 @@ getRegisterR = do
         msg <- getMessage
         [whamlet|
             $maybe mensa <- msg
-                <div>
+                <div .msg>
                     ^{mensa}
             $nothing
             
@@ -43,8 +43,7 @@ postRegisterR = do
         FormSuccess user -> do
             runDB $ insert user
             setMessage [shamlet|
-                <h2>
-                    Usuário inserido com sucesso
+                Usuário inserido com sucesso
             |]
             redirect RegisterR
         _ -> redirect HomeR

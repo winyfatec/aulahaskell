@@ -62,8 +62,7 @@ postForumR = do
         Just titulo -> do
             runDB $ insert $ Forum titulo username criado
             setMessage [shamlet|
-                <h2>
-                    Thread criada com sucesso!
+                Thread criada com sucesso!
             |]
             redirect ForumR
         _ -> redirect HomeR

@@ -52,7 +52,7 @@ postLoginR = do
             case usuario of
                 Nothing -> do
                     setMessage[shamlet|
-                        <div>
+                        <div .msg>
                             Usuario nao encntrado
                     |]
                     redirect LoginR
@@ -62,7 +62,7 @@ postLoginR = do
                         redirect HomeR
                     else do
                         setMessage[shamlet|
-                            <div>
+                            <div .msg>
                                 Senha invalida
                         |]
                         redirect LoginR
