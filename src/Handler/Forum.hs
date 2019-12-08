@@ -57,17 +57,15 @@ postForumR :: Handler Html
 postForumR = do
     cria <- lookupPostParam "titulo"
     Just userId <- lookupSession "_USUARIO"
-    usuario <- runDB $ getBy (UserId userId)
+    Just (Entity uid usr) <- runDB $ getBy (UserId userId)
     criado <- (liftIO getCurrentTime)
     case cria of
         Just titulo -> do
-            case usuario of
-                Just (Entity uid usr) -> do
-                    runDB $ insert $ Forum titulo (UserId uid) criado
-                    setMessage [shamlet|
-                        Thread criada com sucesso!
-                    |]
-                    redirect ForumR
+            runDB $ insert $ Forum titulo uid criado
+            setMessage [shamlet|
+                Thread criada com sucesso!
+            |]
+            redirect ForumR
         _ -> redirect HomeR
 
 
