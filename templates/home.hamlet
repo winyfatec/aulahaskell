@@ -1,4 +1,4 @@
-<div .container>
+<div .pgcontainer>
     $maybe nomeSess <- sess
         <div> 
             Bem-vindo, #{nomeSess}  
