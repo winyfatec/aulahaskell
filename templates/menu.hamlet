@@ -6,7 +6,7 @@
                     <a .nav-link href="@{HomeR}">
                         Home
                 <li .nav-item.dropdown>
-                    <a .nav-link.dropdown-toggle #navbarDropdownJogo role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a .nav-link.dropdown-toggle href="#" #navbarDropdownJogo role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Jogar
                     <div .dropdown-menu aria-labelledby="navbarDropdownJogo">
                         <a .dropdown-item href="@{JogoR 1}">
