@@ -15,7 +15,6 @@ import Data.Time
 import Control.Monad.IO.Class
 import Data.Time.Format
 import Data.Int
-import Data.Text
 
 {-
 formForum :: Form Forum 
@@ -59,7 +58,7 @@ postForumR :: Handler Html
 postForumR = do
     cria <- lookupPostParam "titulo"
     Just userId <- lookupSession "_USUARIO"
-    Just usuario <- runDB $ get404 (toSqlKey (read (unpack userId) :: Int64 ) )
+    Just usuario <- runDB $ get404 (toSqlKey (read (Data.Text.unpack userId) :: Int64 ) )
     -- Just uid <- runDB $ get (UserId usuario)
     criado <- (liftIO getCurrentTime)
     case cria of
