@@ -1,7 +1,7 @@
 <nav .navbar.navbar-expand-lg.navbar-dark.bg-dark>
     <div .collapse.navbar-collapse>
         <ul .navbar-nav>
-            $maybe nomeSess <- sess
+            $maybe nomeSess <- lookupSession "_NOME"
                 <li .nav-item>
                     <a .nav-link href="@{HomeR}">
                         Home
