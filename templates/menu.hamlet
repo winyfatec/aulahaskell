@@ -16,7 +16,7 @@
                             Configurar
                     <li .nav-item>
                         <form action="@{LogoutR}" method=post>
-                            <input type="submit" value="Sair" .btn>
+                            <input type="submit" value="Sair" .nav-link>
             $nothing
                 <li .nav-item #logarlink>
                     <a .nav-link href="@{LoginR}">
