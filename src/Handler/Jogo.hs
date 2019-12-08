@@ -11,7 +11,7 @@ import Database.Persist.Postgresql
 import Text.Lucius
 import Text.Julius
 
-getJogoR :: Id -> Handler Html
+getJogoR :: Int -> Handler Html
 getJogoR jid = do
     defaultLayout $ do
         sess <- lookupSession "_NOME"
