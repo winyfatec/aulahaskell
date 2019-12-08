@@ -11,4 +11,4 @@
 /registrar          RegisterR   GET POST
 /login              LoginR      GET POST
 /logout             LogoutR     GET
-
+/mensagem           MensagemR       POST
