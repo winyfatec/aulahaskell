@@ -12,7 +12,7 @@ Forum
     
 Mensagem
     fkForumId Int
-    fkUsername Text
+    fkUserId Text
     texto Text
     postada UTCTime default=CURRENT_TIMESTAMP
     deriving Show
