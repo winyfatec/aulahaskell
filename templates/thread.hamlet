@@ -1,5 +1,3 @@
 <div>
     Hello!
     
-    #{ForumTitulo thread}
-    #{ForumFkUsername thread}
