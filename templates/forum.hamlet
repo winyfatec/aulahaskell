@@ -1,10 +1,11 @@
 <div .pgcontainer>
     <h1>
         Forum
-    <span .msg>
-        $maybe mensa <- msg
+        
+    $maybe mensa <- msg
+        <span .msg>
             ^{mensa}
-        $nothing
+    $nothing
     
     <table .forum>
         <thead>
