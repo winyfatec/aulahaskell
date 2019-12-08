@@ -28,6 +28,7 @@ getLoginR = do
     defaultLayout $ do
         msg <- getMessage
         setTitle "Aula Haskell Fatec :: Login"
+        sess <- lookupSession "_NOME"
         addStylesheet $ StaticR css_main_css
         addScript $ StaticR js_main_js
         toWidgetHead [hamlet|
