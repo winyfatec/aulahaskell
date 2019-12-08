@@ -68,7 +68,7 @@ postLoginR = do
                         redirect LoginR
         _ -> redirect IndexR
 
-postLogoutR :: Handler Html
-postLogoutR = do
+getLogoutR :: Handler Html
+getLogoutR = do
     deleteSession "_NOME"
     redirect IndexR

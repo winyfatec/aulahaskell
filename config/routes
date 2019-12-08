@@ -10,5 +10,5 @@
 /config             UserConfigR GET
 /registrar          RegisterR   GET POST
 /login              LoginR      GET POST
-/logout             LogoutR         POST
+/logout             LogoutR     GET
 
