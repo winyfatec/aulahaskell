@@ -71,7 +71,7 @@ postForumR = do
 getThreadR :: ForumId -> Handler Html
 getThreadR tid = do
     sess <- lookupSession "_NOME"
-    thd <- runDB $ get404 tid
+    thd <- runDB $ getBy (ForumId tid)
 --    (widget,enctype) <- generateFormPost formForum
     defaultLayout $ do
         setTitle "Aula Haskell Fatec :: Forum"
@@ -83,6 +83,13 @@ getThreadR tid = do
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
         |]
         msg <- getMessage
-        $(whamletFile "templates/menu.hamlet")
-        $(whamletFile "templates/thread.hamlet")
-        $(whamletFile "templates/footer.hamlet")
+        case thd of
+            Just(Entity tid thread) -> do
+                $(whamletFile "templates/menu.hamlet")
+                $(whamletFile "templates/thread.hamlet")
+                $(whamletFile "templates/footer.hamlet")
+            Nothing -> do
+                redirect ForumR
+        
+        
+        
