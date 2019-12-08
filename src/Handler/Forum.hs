@@ -84,9 +84,9 @@ getThreadR tid = do
         |]
         msg <- getMessage
         (Entity _ thread) <- runDB $ get404 tid
-            $(whamletFile "templates/menu.hamlet")
-            $(whamletFile "templates/thread.hamlet")
-            $(whamletFile "templates/footer.hamlet")
+        $(whamletFile "templates/menu.hamlet")
+        $(whamletFile "templates/thread.hamlet")
+        $(whamletFile "templates/footer.hamlet")
         
         
         
