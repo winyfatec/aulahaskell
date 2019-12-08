@@ -1,31 +1,32 @@
-<h1>
-    Forum
-<span .msg>
-    $maybe mensa <- msg
-        ^{mensa}
-    $nothing
-
-<table .forum>
-    <thead>
-        <tr>
-            <th>
-                Titulo
-            <th>
-                Data
-            <th>
-                Usuario
-    <tbody>
-        $forall Entity pid thread <- threads
+<div .pgcontainer>
+    <h1>
+        Forum
+    <span .msg>
+        $maybe mensa <- msg
+            ^{mensa}
+        $nothing
+    
+    <table .forum>
+        <thead>
             <tr>
-                <td>
-                    #{forumTitulo thread}
-                <td>
-                    #{dateFormat $ forumCriado thread}
-                    $#{show $ forumCriado thread}
-                <td>
-                    #{forumFkUsername thread}
-            
-
-<form method=post action=@{ForumR}>
-    <input type="text" name="titulo">
-    <input type="submit" name="criarnovo" value="Enviar">
+                <th>
+                    Titulo
+                <th>
+                    Data
+                <th>
+                    Usuario
+        <tbody>
+            $forall Entity pid thread <- threads
+                <tr>
+                    <td>
+                        #{forumTitulo thread}
+                    <td>
+                        #{dateFormat $ forumCriado thread}
+                        $#{show $ forumCriado thread}
+                    <td>
+                        #{forumFkUsername thread}
+                
+    
+    <form method=post action=@{ForumR}>
+        <input type="text" name="titulo">
+        <input type="submit" name="criarnovo" value="Enviar">
