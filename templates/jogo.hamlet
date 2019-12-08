@@ -1,5 +1,5 @@
-<object type="application/x-shockwave-flash" data="Jogos/JogoLutaV4.swf" width="850" height="550" id="histo2" style="float: none; vertical-align:middle">
-    <param name="movie" value="#{show jogos}" />
+<object type="application/x-shockwave-flash" data="@{jogos}" width="850" height="550" id="histo2" style="float: none; vertical-align:middle">
+    <param name="movie" value="#{jogos}" />
     <param name="quality" value="high" />
     <param name="bgcolor" value="#FFFFFF" />
     <param name="play" value="true" />
