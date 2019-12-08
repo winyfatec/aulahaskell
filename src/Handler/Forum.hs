@@ -57,7 +57,7 @@ postForumR :: Handler Html
 postForumR = do
     cria <- lookupPostParam "titulo"
     Just userId <- lookupSession "_USUARIO"
-    Just (Entity uid usr) <- runDB $ getBy (UserId userId)
+    uid <- runDB $ get (UserId userId)
     criado <- (liftIO getCurrentTime)
     case cria of
         Just titulo -> do
