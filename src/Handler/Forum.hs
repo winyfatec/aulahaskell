@@ -59,7 +59,9 @@ postForumR :: Handler Html
 postForumR = do
     cria <- lookupPostParam "titulo"
     Just userId <- lookupSession "_USUARIO"
-    Just usuario <- runDB $ get404 (toSqlKey (read (Data.Text.unpack userId) :: Int64 ) )
+    --Just usuario <- runDB $ get404 (toSqlKey (read (Data.Text.unpack userId) :: Int64 ) )
+    Just usuario <- runDB $ get Key $ PersistInt64 (fromIntegral (read (Data.Text.unpack userId) :: Int64 ))
+    
     -- Just uid <- runDB $ get (UserId usuario)
     criado <- (liftIO getCurrentTime)
     case cria of
