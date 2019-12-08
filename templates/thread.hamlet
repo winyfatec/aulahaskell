@@ -21,7 +21,7 @@
                         Usuário: #{userUsername user}
                         Data: #{dateFormat $ mensagemPostada mensagem}
                     <td>
-                        Mensagem: $#{show $ mensagemtexto mensagem}
+                        Mensagem: $#{show $ mensagemTexto mensagem}
         <tfoot>
             <tr>
                 <td colspan=2 .ftable>
