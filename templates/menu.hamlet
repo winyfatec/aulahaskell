@@ -16,7 +16,7 @@
                         <a .dropdown-item href="@{JogoR 3}">
                             Luta
                 <li .nav-item>
-                $#<img width="50" src="@{StaticR icons_fontawesome_regular_comment_svg}">
+                    <img width="50" src="@{StaticR icons_fontawesome_regular_comment_svg}">
                     <a .nav-link href="@{ForumR}">
                         Forum
                 <li .nav-item>
