@@ -20,7 +20,8 @@
             $forall Entity pid thread <- threads
                 <tr>
                     <td>
-                        #{forumTitulo thread}
+                        <a href="#{ThreadR pid}"
+                            #{forumTitulo thread}
                     <td>
                         #{dateFormat $ forumCriado thread}
                         $#{show $ forumCriado thread}
