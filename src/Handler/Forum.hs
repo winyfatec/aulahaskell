@@ -58,7 +58,7 @@ postForumR :: Handler Html
 postForumR = do
     cria <- lookupPostParam "titulo"
     Just userId <- lookupSession "_USUARIO"
-    --Just usuario <- runDB $ get404 (toSqlKey $ read userId :: Int64)
+    Just usuario <- runDB $ get404 (toSqlKey (read userId :: Int64))
     -- Just uid <- runDB $ get (UserId usuario)
     t <- read userId :: Int64
     criado <- (liftIO getCurrentTime)
@@ -66,7 +66,6 @@ postForumR = do
         Just titulo -> do
             --runDB $ insert $ Forum titulo (UserId usuario) criado
             setMessage [shamlet|
-                #{t}
                 Thread criada com sucesso!
             |]
             redirect ForumR
