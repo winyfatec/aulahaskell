@@ -19,7 +19,7 @@ formThread = renderBootstrap $ Discussao
     <*> aopt hiddenField "username" Nothing
 -}
 
-getThreadR :: ThreadId -> Handler Html
+getThreadR :: id -> Handler Html
 getThreadR pid = do
     sess <- lookupSession "_NOME"
     thd <- runDB $ selectList [pid] []
