@@ -94,20 +94,20 @@ getThreadR tid = do
         $(whamletFile "templates/thread.hamlet")
         $(whamletFile "templates/footer.hamlet")
 
-postMensagemR :: Handler Html
-postMensagemR = do
-    mensagem <- lookupPostParam "mensagem"
-    forumId <- lookupPostParam "forumId"
-    Just username <- lookupSession "_NOME"
-    Just (Entity uid _) <- runDB $ getBy (UniqueUsername username)
-    Just (Entity fid _) <- runDB $ selectList [ForumId ==. forumId] []
-    -- Just uid <- runDB $ get (UserId usuario)
-    criado <- (liftIO getCurrentTime)
-    case mensagem of
-        Just titulo -> do
-            runDB $ insert $ Mensagem fid uid mensagem criado
-            setMessage [shamlet|
-                Thread criada com sucesso!
-            |]
-            redirect ForumR
-        _ -> redirect HomeR
+-- postMensagemR :: Handler Html
+-- postMensagemR = do
+--     mensagem <- lookupPostParam "mensagem"
+--     forumId <- lookupPostParam "forumId"
+--     Just username <- lookupSession "_NOME"
+--     Just (Entity uid _) <- runDB $ getBy (UniqueUsername username)
+--     Just (Entity fid _) <- runDB $ selectList [ForumId ==. forumId] []
+--     -- Just uid <- runDB $ get (UserId usuario)
+--     criado <- (liftIO getCurrentTime)
+--     case mensagem of
+--         Just titulo -> do
+--             runDB $ insert $ Mensagem fid uid mensagem criado
+--             setMessage [shamlet|
+--                 Thread criada com sucesso!
+--             |]
+--             redirect ForumR
+--         _ -> redirect HomeR
