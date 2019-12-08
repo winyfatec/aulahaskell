@@ -6,7 +6,7 @@ User
     
 Forum
     titulo Text
-    fkUsername UserUsername
+    fkUserId UserId
     criado UTCTime default=CURRENT_TIMESTAMP
     deriving Show
     

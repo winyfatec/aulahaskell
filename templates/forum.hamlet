@@ -14,8 +14,6 @@
                     Titulo
                 <th>
                     Data
-                <th>
-                    Usuario
         <tbody>
             $forall Entity pid thread <- threads
                 <tr>
@@ -25,11 +23,9 @@
                     <td>
                         #{dateFormat $ forumCriado thread}
                         $#{show $ forumCriado thread}
-                    <td>
-                        #{show $ forumFkUsername thread}
         <tfoot>
             <tr>
-                <td colspan=3 .ftable>
+                <td colspan=2 .ftable>
                     <form method=post action=@{ForumR}>
                         <input type="text" name="titulo" .form-control>
                         <input type="submit" name="criarnovo" value="Criar" .btn.btn-primary>
