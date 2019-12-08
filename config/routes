@@ -5,6 +5,7 @@
 
 /                   IndexR      GET
 /home               HomeR       GET
+/jogo/#Id           JogoR       GET
 /forum              ForumR      GET POST
 /thread/#ForumId    ThreadR     GET 
 /config             UserConfigR GET

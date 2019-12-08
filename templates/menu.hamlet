@@ -4,7 +4,17 @@
             $maybe nomeSess <- sess
                 <li .nav-item>
                     <a .nav-link href="@{HomeR}">
+                        Home
+                <li .nav-item.dropdown>
+                    <a .nav-link.dropdown-toggle #navbarDropdownMenuLink role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Jogar
+                    <div .dropdown-menu aria-labelledby="navbarDropdown">
+                        <a .dropdown-item href="@{JogoR 1}">
+                            Corredor
+                        <a .dropdown-item href="#">
+                            Tiro
+                        <a .dropdown-item href="#">
+                            Luta
                 <li .nav-item>
                 $#<img width="50" src="@{StaticR icons_fontawesome_regular_comment_svg}">
                     <a .nav-link href="@{ForumR}">
