@@ -52,8 +52,8 @@ postLoginR = do
             case usuario of
                 Nothing -> do
                     setMessage[shamlet|
-                        <div .msg>
-                            Usuario nao encntrado
+                        <div .alert.alert-danger>
+                            Usuario nao encontrado
                     |]
                     redirect LoginR
                 Just(Entity uid usr) -> do
@@ -62,7 +62,7 @@ postLoginR = do
                         redirect HomeR
                     else do
                         setMessage[shamlet|
-                            <div .msg>
+                            <div .alert.alert-danger>
                                 Senha invalida
                         |]
                         redirect LoginR

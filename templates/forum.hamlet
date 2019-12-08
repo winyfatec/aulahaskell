@@ -3,11 +3,11 @@
         Forum
         
     $maybe mensa <- msg
-        <div .msg>
+        <div .alert.alert-success>
             ^{mensa}
     $nothing
     
-    <table .forum>
+    <table .table>
         <thead>
             <tr>
                 <th>
