@@ -103,7 +103,7 @@ postMensagemR = do
     Just (Entity fid _) <- runDB $ getBy (ForumId forumId)
     -- Just uid <- runDB $ get (UserId usuario)
     criado <- (liftIO getCurrentTime)
-    case cria of
+    case mensagem of
         Just titulo -> do
             runDB $ insert $ Mensagem forumId pid mensagem criado
             setMessage [shamlet|
