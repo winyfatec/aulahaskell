@@ -1,6 +1,6 @@
 <div .pgcontainer>
     $maybe mensa <- msg
-        <div .msg>
+        <div .alert.alert-danger>
             ^{mensa}
     $nothing
     

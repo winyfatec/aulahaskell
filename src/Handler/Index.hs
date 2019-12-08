@@ -14,7 +14,7 @@ import Text.Julius
 getIndexR :: Handler Html
 getIndexR = do
     defaultLayout $ do
-        sess <- lookupSession "_NOME"
+        sess <- lookupSession "_USUARIO"
         setTitle "Aula Haskell Fatec"
         addStylesheet $ StaticR css_main_css
         addScript $ StaticR js_main_js
