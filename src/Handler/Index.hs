@@ -15,7 +15,7 @@ getIndexR :: Handler Html
 getIndexR = do
     defaultLayout $ do
         sess <- lookupSession "_NOME"
-         setTitle "Aula Haskell Fatec"
+        setTitle "Aula Haskell Fatec"
         addStylesheet $ StaticR css_main_css
         addScript $ StaticR js_main_js
         toWidgetHead [hamlet|
