@@ -76,7 +76,7 @@ postForumR = do
 getThreadR :: ForumId -> Handler Html
 getThreadR tid = do
     sess <- lookupSession "_USUARIO"
-    let sql = "SELECT ??,??,?? FROM forum INNER JOIN mensagem ON mensagem.fkForumId = forum.id INNER JOIN user ON mensagem.fkUserId = user.id WHERE forum.id = ?"
+    let sql = "SELECT ??,??,?? FROM mensagem msg INNER JOIN forum frm ON msg.fkForumId = frm.id INNER JOIN user usr ON msg.fkUserId = usr.id WHERE frm.id = ?"
     thread <- runDB $ get404 tid
     mensagens <- runDB $ rawSql sql [toPersistValue tid] :: Handler [(Entity Forum,Entity Mensagem,Entity User)]
     -- (widget,enctype) <- generateFormPost formForum
@@ -93,7 +93,3 @@ getThreadR tid = do
         $(whamletFile "templates/menu.hamlet")
         $(whamletFile "templates/thread.hamlet")
         $(whamletFile "templates/footer.hamlet")
-        
-  
-        
-        
