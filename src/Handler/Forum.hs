@@ -105,7 +105,7 @@ postMensagemR = do
     criado <- (liftIO getCurrentTime)
     case mensagem of
         Just titulo -> do
-            runDB $ insert $ Mensagem forumId pid mensagem criado
+            runDB $ insert $ Mensagem fid pid mensagem criado
             setMessage [shamlet|
                 Thread criada com sucesso!
             |]
