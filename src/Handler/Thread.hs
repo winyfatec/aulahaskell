@@ -20,9 +20,9 @@ formThread = renderBootstrap $ Discussao
 -}
 
 getThreadR :: ThreadId -> Handler Html
-getThreadR pid = do
+getThreadR threadid = do
     sess <- lookupSession "_NOME"
-    thd <- runDB $ selectList [pid] []
+    thd <- runDB $ selectList [threadid] []
 --    (widget,enctype) <- generateFormPost formForum
     defaultLayout $ do
         setTitle "Aula Haskell Fatec :: Forum"

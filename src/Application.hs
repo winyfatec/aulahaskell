@@ -42,7 +42,6 @@ import Handler.Login
 import Handler.Index
 import Handler.Home
 import Handler.Forum
-import Handler.Thread
 import Handler.Registration
 import Handler.Login
 import Handler.UserConfig
