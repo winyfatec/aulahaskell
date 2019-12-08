@@ -76,9 +76,9 @@ postForumR = do
 getThreadR :: ForumId -> Handler Html
 getThreadR tid = do
     sess <- lookupSession "_USUARIO"
-    let sql = "SELECT ??,??,?? FROM mensagem msg INNER JOIN forum frm ON msg.fkForumId = frm.id INNER JOIN user usr ON msg.fkUserId = usr.id WHERE frm.id = ?"
+    let sql = "SELECT ??,??,?? FROM mensagem msg INNER JOIN forum frm ON msg.fk_Forum_Id = frm.id INNER JOIN Usuario usr ON msg.fk_User_Id = usr.id WHERE frm.id = ?"
     thread <- runDB $ get404 tid
-    mensagens <- runDB $ rawSql sql [toPersistValue tid] :: Handler [(Entity Forum,Entity Mensagem,Entity User)]
+    mensagens <- runDB $ rawSql sql [toPersistValue tid] :: Handler [(Entity Forum,Entity Mensagem,Entity Usuario)]
     -- (widget,enctype) <- generateFormPost formForum
     defaultLayout $ do
         setTitle "Aula Haskell Fatec :: Forum"
