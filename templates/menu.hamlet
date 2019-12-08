@@ -6,7 +6,7 @@
                     <a .nav-link href="@{HomeR}">
                         Home
                 <li .nav-item.dropdown>
-                    <a .nav-link.dropdown-toggle #navbarDropdownJogo role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a .dropdown-toggle #navbarDropdownJogo role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Jogar
                     <div .dropdown-menu aria-labelledby="navbarDropdownJogo">
                         <a .dropdown-item href="#">
@@ -19,11 +19,8 @@
                 $#<img width="50" src="@{StaticR icons_fontawesome_regular_comment_svg}">
                     <a .nav-link href="@{ForumR}">
                         Forum
-                <li .nav-item.dropdown>
-                    <a .nav-link.dropdown-toggle #navbarDropdownMenuLink role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Conta
-                    <div .dropdown-menu aria-labelledby="navbarDropdownMenuLink">
-                        <a .dropdown-item href="#">
+                <li .nav-item>
+                    <a .nav-link href="#">
                             Configurar
                 <li .nav-item>
                     <a href="@{LogoutR}" class="nav-link " data-value="sair">Sair
