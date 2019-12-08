@@ -61,7 +61,7 @@ postForumR = do
     criado <- (liftIO getCurrentTime)
     case cria of
         Just titulo -> do
-            runDB $ insert $ Forum titulo usuario criado
+            runDB $ insert $ Forum titulo (Just usuario) criado
             setMessage [shamlet|
                 Thread criada com sucesso!
             |]
