@@ -15,7 +15,7 @@ import Yesod
 import Yesod.Form.Bootstrap3
 
 
-formUserConfig :: Form User
+formUserConfig :: Form Usuario
 formUserConfig  = renderBootstrap $ User
     <$> areq textField nomeUsuario Nothing
     <*> areq passwordField (bfs ("Senha" :: Text)) Nothing
