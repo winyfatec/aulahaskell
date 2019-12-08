@@ -18,10 +18,10 @@
             $forall (Entity _ forum, Entity _ mensagem, Entity _ user) <- mensagens
                 <tr>
                     <td>
-                        #{userUsername user}
-                        #{dateFormat $ mensagemPostada mensagem}
+                        Usuário: #{userUsername user}
+                        Data: #{dateFormat $ mensagemPostada mensagem}
                     <td>
-                        $#{show $ mensagemtexto mensagem}
+                        Mensagem: $#{show $ mensagemtexto mensagem}
         <tfoot>
             <tr>
                 <td colspan=2 .ftable>
