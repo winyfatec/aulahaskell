@@ -6,7 +6,7 @@
 /           IndexR      GET
 /home       HomeR       GET
 /forum      ForumR      GET POST
-/thread     ThreadR     GET 
+/thread/#id ThreadR     GET 
 /config     UserConfigR GET
 /registrar  RegisterR   GET POST
 /login      LoginR      GET POST

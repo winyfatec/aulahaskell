@@ -19,9 +19,10 @@ formThread = renderBootstrap $ Discussao
     <*> aopt hiddenField "username" Nothing
 -}
 
-getThreadR :: Handler Html
-getThreadR = do
+getThreadR :: ThreadId -> Handler Html
+getThreadR pid = do
     sess <- lookupSession "_NOME"
+    thd <- runDB $ selectList [pid] []
 --    (widget,enctype) <- generateFormPost formForum
     defaultLayout $ do
         setTitle "Aula Haskell Fatec :: Forum"
@@ -40,6 +41,7 @@ getThreadR = do
 {-
 postThreadR :: Handler Html
 postThreadR = do
+    _ <- runDB $ get404 pid
     ((result,_),_) <- runFormPost formThread
     case result of
         FormSuccess Thread -> do
