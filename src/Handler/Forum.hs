@@ -71,7 +71,7 @@ postForumR = do
 getThreadR :: ForumId -> Handler Html
 getThreadR tid = do
     sess <- lookupSession "_NOME"
-    thd <- runDB $ getBy (ForumId tid)
+    thd <- runDB $ getBy tid
 --    (widget,enctype) <- generateFormPost formForum
     defaultLayout $ do
         setTitle "Aula Haskell Fatec :: Forum"
