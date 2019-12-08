@@ -100,7 +100,7 @@ postMensagemR = do
     forumId <- lookupPostParam "forumId"
     Just username <- lookupSession "_NOME"
     Just (Entity uid _) <- runDB $ getBy (UniqueUsername username)
-    Just (Entity fid _) <- runDB $ getBy (ForumId forumId)
+    Just (Entity fid _) <- runDB $ selectList [ForumId ==. forumId] []
     -- Just uid <- runDB $ get (UserId usuario)
     criado <- (liftIO getCurrentTime)
     case mensagem of
