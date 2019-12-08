@@ -34,7 +34,7 @@ getThreadR = do
         |]
         msg <- getMessage
         $(whamletFile "templates/menu.hamlet")
-        $(whamletFile "templates/forum.hamlet")
+        $(whamletFile "templates/thread.hamlet")
         $(whamletFile "templates/footer.hamlet")
         
 {-
