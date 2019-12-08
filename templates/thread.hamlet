@@ -26,6 +26,5 @@
             <tr>
                 <td colspan=2 .ftable>
                     <form method=post action=@{ForumR}>
-                        <input type="number" name="forumId" .form-control value=#{tid} disabled>
                         <input type="text" name="mensagen" .form-control>
                         <input type="submit" name="criarnovo" value="Postar" .btn.btn-primary>
