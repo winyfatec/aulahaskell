@@ -33,6 +33,7 @@ dateFormat = formatTime defaultTimeLocale "%d/%m/%Y %H:%M:%S"
 getForumR :: Handler Html
 getForumR = do
     threads <- runDB $ selectList [] [Asc ForumTitulo]
+    sess <- lookupSession "_NOME"
 --    (widget,enctype) <- generateFormPost formForum
     defaultLayout $ do
         msg <- getMessage
