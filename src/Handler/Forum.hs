@@ -14,6 +14,7 @@ import Text.Julius
 import Data.Time
 import Control.Monad.IO.Class
 import Data.Time.Format
+import Yesod.Static (staticFiles)
 
 {-
 formForum :: Form Forum 
