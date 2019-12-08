@@ -43,7 +43,10 @@ getForumR = do
             $nothing
                 
         |]
+        $(whamletFile "templates/header.hamlet")
+        $(whamletFile "templates/menu.hamlet")
         $(whamletFile "templates/forum.hamlet")
+        $(whamletFile "templates/footer.hamlet")
         
         
         
