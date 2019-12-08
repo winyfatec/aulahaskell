@@ -28,7 +28,7 @@
                     <td>
                         #{forumFkUsername thread}
         <tfoot>
-            <td cols=3 .ftable>
+            <td colspan=3 .ftable>
                 <form method=post action=@{ForumR}>
                     <input type="text" name="titulo" .form-control>
                     <input type="submit" name="criarnovo" value="Criar" .btn.btn-primary>
