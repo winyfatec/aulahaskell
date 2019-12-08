@@ -58,11 +58,11 @@ postForumR = do
     cria <- lookupPostParam "titulo"
     Just userId <- lookupSession "_USUARIO"
     Just usuario <- runDB $ get404 userId
-    Just uid <- runDB $ get (UserId usuario)
+    -- Just uid <- runDB $ get (UserId usuario)
     criado <- (liftIO getCurrentTime)
     case cria of
         Just titulo -> do
-            runDB $ insert $ Forum titulo uid criado
+            runDB $ insert $ Forum titulo (UserId usuario) criado
             setMessage [shamlet|
                 Thread criada com sucesso!
             |]
