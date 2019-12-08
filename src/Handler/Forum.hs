@@ -56,7 +56,7 @@ postForumR = do
     case cria of
         Just titulo -> do
             runDB $ insert $ Forum titulo username criado
-            setMessage [shamlet|
+            setMessage [hamlet|
                 <h2>
                     Thread criada com sucesso!
             |]
