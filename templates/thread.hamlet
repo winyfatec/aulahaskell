@@ -18,7 +18,7 @@
             $forall (Entity _ forum, Entity _ mensagem, Entity _ user) <- mensagens
                 <tr>
                     <td>
-                        #{mensagemFkUsername mensagem}
+                        #{userUsername user}
                         #{dateFormat $ mensagemPostada mensagem}
                     <td>
                         $#{show $ mensagemtexto mensagem}
