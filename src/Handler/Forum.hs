@@ -111,7 +111,7 @@ postMensagemR = do
             setMessage [shamlet|
                 Mensagem postada com sucesso!
             |]
-            redirect $ ThreadR forum
+            redirect ThreadR forum
         _ -> redirect HomeR
 
 
