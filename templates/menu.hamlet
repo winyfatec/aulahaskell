@@ -1,4 +1,4 @@
-<nav .navbar.navbar-expand-lg.navbar-dark.bg-dark>
+<nav .navbar.navbar-expand-lg.navbar-light.bg-light>
     <div .collapse.navbar-collapse>
         <ul .navbar-nav>
             $maybe nomeSess <- sess
@@ -18,7 +18,7 @@
                 <li .nav-item>
                     
                     <a .nav-link href="@{ForumR}">
-                        <img width="20" src="@{StaticR icons_fontawesome_regular_comment_svg}">
+                        <img width="20" src="@{StaticR icons_fontawesome_regular_comments_svg}">
                         Forum
                 <li .nav-item>
                     <a .nav-link href="#">
