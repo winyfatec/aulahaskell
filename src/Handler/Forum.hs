@@ -15,6 +15,7 @@ import Data.Time
 import Control.Monad.IO.Class
 import Data.Time.Format
 import Data.Int
+import Data.Text
 
 {-
 formForum :: Form Forum 
