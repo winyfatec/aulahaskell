@@ -58,15 +58,16 @@ getForumR = do
 postForumR :: Handler Html
 postForumR = do
     cria <- lookupPostParam "titulo"
-    Just userId <- lookupSession "_USUARIO"
+    Just username <- lookupSession "_USUARIO"
+    Just usuario <- runDB $ getBy (UniqueUsername username)
     --Just usuario <- runDB $ get404 (toSqlKey (read (Data.Text.unpack userId) :: Int64 ) )
-    Just usuario <- runDB $ get Key $ PersistInt64 (fromIntegral (read (Data.Text.unpack userId) :: Int64 ))
+    --Just usuario <- runDB $ get Key $ PersistInt64 (fromIntegral (read (Data.Text.unpack userId) :: Int64 ))
     
     -- Just uid <- runDB $ get (UserId usuario)
     criado <- (liftIO getCurrentTime)
     case cria of
         Just titulo -> do
-            --runDB $ insert $ Forum titulo (UserId usuario) criado
+            runDB $ insert $ Forum titulo (UserId usuario) criado
             setMessage [shamlet|
                 Thread criada com sucesso!
             |]
