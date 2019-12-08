@@ -26,7 +26,7 @@
                         #{dateFormat $ forumCriado thread}
                         $#{show $ forumCriado thread}
                     <td>
-                        #{forumFkUsername thread}
+                        #{show $ forumFkUsername thread}
         <tfoot>
             <tr>
                 <td colspan=3 .ftable>

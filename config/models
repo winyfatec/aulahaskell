@@ -6,13 +6,13 @@ User
     
 Forum
     titulo Text
-    fkUsername Text
+    fkUsername UserUsername
     criado UTCTime default=CURRENT_TIMESTAMP
     deriving Show
     
 Mensagem
-    fkForumId Int
-    fkUserId Int
+    fkForumId ForumId
+    fkUserId UserId
     texto Text
     postada UTCTime default=CURRENT_TIMESTAMP
     deriving Show
