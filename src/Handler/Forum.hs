@@ -56,11 +56,12 @@ getForumR = do
 postForumR :: Handler Html
 postForumR = do
     cria <- lookupPostParam "titulo"
-    usuario <- runDB $ get404 Just lookupSession "_USUARIO"
+    Just userId <- lookupSession "_USUARIO"
+    usuario <- runDB $ get404 userId
     criado <- (liftIO getCurrentTime)
     case cria of
         Just titulo -> do
-            runDB $ insert $ Forum titulo usuario criado
+            runDB $ insert $ Forum titulo (UserId usuario) criado
             setMessage [shamlet|
                 Thread criada com sucesso!
             |]
