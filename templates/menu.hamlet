@@ -9,11 +9,11 @@
                     <a .dropdown-toggle #navbarDropdownJogo role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Jogar
                     <div .dropdown-menu aria-labelledby="navbarDropdownJogo">
-                        <a .dropdown-item href="#">
+                        <a .dropdown-item href="@{JogoR 1}">
                             Corredor
-                        <a .dropdown-item href="#">
+                        <a .dropdown-item href="@{JogoR 2}">
                             Tiro
-                        <a .dropdown-item href="#">
+                        <a .dropdown-item href="@{JogoR 3}">
                             Luta
                 <li .nav-item>
                 $#<img width="50" src="@{StaticR icons_fontawesome_regular_comment_svg}">
