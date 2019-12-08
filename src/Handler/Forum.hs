@@ -58,7 +58,7 @@ getForumR = do
 postForumR :: Handler Html
 postForumR = do
     cria <- lookupPostParam "titulo"
-    Just username <- lookupSession "_USUARIO"
+    Just username <- lookupSession "_NOME"
     --Just usuario <- runDB $ getBy (UniqueUsername username)
     Just (Entity pid _) <- runDB $ getBy (UniqueUsername username)
     -- Just uid <- runDB $ get (UserId usuario)
