@@ -4,7 +4,7 @@ body {
 }
 h1 {
     font-size: 20pt;
-    color: #EEEEEE;
+    color: #222222;
 }
 
 .pgcontainer {
@@ -58,6 +58,10 @@ h1 {
 .menuhaskitem a:hover {
     color: #999999;
 }
+#logaritem {
+    float: right;
+    clear: both;
+}
 
 .formlogin {
     width: 500px;
@@ -82,6 +86,7 @@ h1 {
     text-align: right;
     float: right;
     clear: both;
+    background-color: #000000;
 }
 
 /* JOGO */

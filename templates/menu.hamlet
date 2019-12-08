@@ -4,7 +4,7 @@
             $maybe nomeSess <- sess
                 <li .nav-item>
                     <a .nav-link href="@{HomeR}">
-                        Home
+                        Jogar
                 <li .nav-item>
                     <a .nav-link href="@{ForumR}">
                         Forum
@@ -16,9 +16,9 @@
                             Configurar
                     <li .nav-item>
                         <form action="@{LogoutR}" method=post>
-                            <input type="submit" value="Sair">
+                            <input type="submit" value="Sair" .btn>
             $nothing
-                <li .nav-item>
+                <li .nav-item #logarlink>
                     <a .nav-link href="@{LoginR}">
                         Logar
                 
