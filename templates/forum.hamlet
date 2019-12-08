@@ -7,8 +7,8 @@
             ^{mensa}
     $nothing
     
-    <table .table>
-        <thead>
+    <table .table.table-striped>
+        <thead .thread-dark>
             <tr>
                 <th>
                     Titulo

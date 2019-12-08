@@ -87,6 +87,6 @@ getThreadR tid = do
         $(whamletFile "templates/thread.hamlet")
         $(whamletFile "templates/footer.hamlet")
         
-        
+  
         
         

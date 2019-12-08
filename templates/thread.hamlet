@@ -1,3 +1,29 @@
-<div>
-    Hello!
+<div .pgcontainer>
+    <h1>
+        Forum
+        
+    $maybe mensa <- msg
+        <div .alert.alert-success>
+            ^{mensa}
+    $nothing
     
+    <table .table.table-striped>
+        <thead .thread-dark>
+            <tr>
+                <th>
+                <th>
+                    Mensagem
+        <tbody>
+            $forall Entity pid mensagem <- mensagens
+                <tr>
+                    <td>
+                        #{mensagemFkUsername mensagem}
+                        #{dateFormat $ mensagemPostada mensagem}
+                    <td>
+                        $#{show $ mensagemtexto mensagem}
+        <tfoot>
+            <tr>
+                <td colspan=2 .ftable>
+                    <form method=post action=@{ForumR}>
+                        <input type="text" name="titulo" .form-control>
+                        <input type="submit" name="criarnovo" value="Postar" .btn.btn-primary>
