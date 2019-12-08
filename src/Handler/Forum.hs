@@ -62,7 +62,7 @@ postForumR = do
     case cria of
         Just titulo -> do
             case usuario of
-                Just (Entity uid usr)
+                Just (Entity uid usr) -> do
                     runDB $ insert $ Forum titulo uid criado
                     setMessage [shamlet|
                         Thread criada com sucesso!
