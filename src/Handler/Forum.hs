@@ -71,9 +71,9 @@ postForumR = do
 getThreadR :: ForumId -> Handler Html
 getThreadR tid = do
     sess <- lookupSession "_NOME"
-    let sql = "SELECT * FROM forum \
+    let sql = "SELECT ??,??,?? FROM forum \
           \ INNER JOIN mensagem ON mensagem.fkForumId = forum.id \
-          \ INNER JOIN user ON mensagem.fkUsername = user.id \
+          \ INNER JOIN user ON mensagem.fkUsername = user.username \
           \ WHERE forum.id = ?"
     thread <- runDB $ get404 tid
     mensagens <- runDB $ rawSql sql [toPersistValue tid] :: Handler [(Entity Forum,Entity Mensagem,Entity User)]
