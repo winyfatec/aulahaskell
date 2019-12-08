@@ -49,7 +49,6 @@ getForumR = do
             <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha256-0rguYS0qgS6L4qVzANq4kjxPLtvnp5nn2nB5G1lWRv4=" crossorigin="anonymous">
         |]
         msg <- getMessage
-        $(whamletFile "templates/header.hamlet")
         $(whamletFile "templates/menu.hamlet")
         $(whamletFile "templates/forum.hamlet")
         $(whamletFile "templates/footer.hamlet")
