@@ -61,7 +61,6 @@ postForumR = do
     Just username <- lookupSession "_USUARIO"
     --Just usuario <- runDB $ getBy (UniqueUsername username)
     Just (Entity pid _) <- runDB $ getBy (UniqueUsername username)
-    
     -- Just uid <- runDB $ get (UserId usuario)
     criado <- (liftIO getCurrentTime)
     case cria of
