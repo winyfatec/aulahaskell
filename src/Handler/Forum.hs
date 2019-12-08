@@ -36,14 +36,9 @@ getForumR = do
     sess <- lookupSession "_NOME"
 --    (widget,enctype) <- generateFormPost formForum
     defaultLayout $ do
+        addStylesheet $ StaticR css_main_css
+        addScript $ StaticR js_main_js
         msg <- getMessage
-        [whamlet|
-            $maybe mensa <- msg
-                <div>
-                    ^{mensa}
-            $nothing
-                
-        |]
         $(whamletFile "templates/header.hamlet")
         $(whamletFile "templates/menu.hamlet")
         $(whamletFile "templates/forum.hamlet")

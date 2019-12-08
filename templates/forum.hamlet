@@ -1,6 +1,10 @@
 <h1>
     Forum
-    
+<span .msg>
+    $maybe mensa <- msg
+        ^{mensa}
+    $nothing
+
 <table .forum>
     <thead>
         <tr>
