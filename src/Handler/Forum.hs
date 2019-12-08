@@ -14,7 +14,7 @@ import Text.Julius
 import Data.Time
 import Control.Monad.IO.Class
 import Data.Time.Format
-import Data.Int64
+import Data.Int
 
 {-
 formForum :: Form Forum 
