@@ -26,8 +26,8 @@
                         $#{show $ forumCriado thread}
                     <td>
                         #{forumFkUsername thread}
-                
-    
-    <form method=post action=@{ForumR}>
-        <input type="text" name="titulo">
-        <input type="submit" name="criarnovo" value="Enviar">
+        <tfoot>
+            <td cols=3 .ftable>
+                <form method=post action=@{ForumR}>
+                    <input type="text" name="titulo" .form-control.col-2>
+                    <input type="submit" name="criarnovo" value="Criar" .btn.btn-primary>
