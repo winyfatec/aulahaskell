@@ -6,7 +6,7 @@
                     <a .nav-link href="@{HomeR}">
                         Jogar
                 <li .nav-item>
-                <img width="50" src=@{StaticR fontawesome_svgs_regular_comment_svg}
+                <img width="50" src=@{StaticR fontawesome/svgs/regular/comment_svg}
                     <a .nav-link href="@{ForumR}">
                         Forum
                 <li .nav-item.dropdown>
