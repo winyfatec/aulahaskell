@@ -98,20 +98,19 @@ getThreadR tid = do
 
         
    
-postMensagemR :: Handler Html
-postMensagemR = do
+postMensagemR :: Forum -> Handler Html
+postMensagemR forum = do
     texto <- lookupPostParam "mensagem"
-    fid <- lookupPostParam "forumid"
     Just username <- lookupSession "_NOME"
     Just (Entity pid _) <- runDB $ getBy (UniqueUsername username)
     postada <- (liftIO getCurrentTime)
-    case fid of
+    case texto of
         Just forum -> do
-            runDB $ insert $ Mensagem forum pid texto postada
+            runDB $ insert $ Mensagem (ForumId forum) pid texto postada
             setMessage [shamlet|
                 Mensagem postada com sucesso!
             |]
-            redirect ThreadR forum
+            redirect ThreadR (Forumid forum)
         _ -> redirect HomeR
 
 
