@@ -116,7 +116,7 @@ postMensagemR fid = do
         
 getEMensagemR :: MensagemId -> Handler html
 getEMensagemR mid = do
-    msg <- runDB $ get404 mid
+    --msg <- runDB $ get404 mid
     redirect ForumR
 
 
