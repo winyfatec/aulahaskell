@@ -1,6 +1,6 @@
 <div .pgcontainer>
     <h1>
-        Forum
+        #{ForumTitulo thread}
         
     $maybe mensa <- msg
         <div .alert.alert-success>
@@ -16,11 +16,12 @@
         <tbody>
             $forall (Entity _ forum, Entity _ mensagem, Entity _ user) <- mensagens
                 <tr .row>
-                    <td .w-25>
+                    <td .w-25.align-top>
                         Usuário: #{usuarioUsername user}
+                        <br>
                         Data: #{dateFormat $ mensagemPostada mensagem}
-                    <td>
-                        Mensagem: #{show $ mensagemTexto mensagem}
+                    <td .text-justify>
+                        #{show $ mensagemTexto mensagem}
         <tfoot>
             <tr>
                 <td colspan=2 .ftable>
