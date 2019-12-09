@@ -43,7 +43,7 @@ postUserConfigR = do
     ((result,_),_) <- runFormPost formUserConfig
     case result of
         FormSuccess user -> do
-            _ <- runDB $ replace (UsuarioId user) user
+            _ <- runDB $ replace (UsuarioId user) $ user
             --runDB $ updateWhere [uid ==. sess] [username *=. (userUsername user)]
             setMessage [shamlet|
                 <h2>
