@@ -121,10 +121,10 @@ postEXMensagemR :: MensagemId -> Handler Html
 postEXMensagemR mid = do
     msg <- runDB $ get404 mid
     case msg of
-    Just m -> do
-        runDB $ delete mid
-        redirect ThreadR $ ForumId m
-    _ -> redirect ForumR
+        Just m -> do
+            runDB $ delete mid
+            redirect ThreadR $ ForumId m
+        _ -> redirect ForumR
 
 
 
