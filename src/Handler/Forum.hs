@@ -113,7 +113,7 @@ postMensagemR fid = do
             redirect $ ThreadR fid
         _ -> do
             setMessage [shamlet|
-                Mensagem com erro
+                Mensagem #{Just texto}
             |]
             redirect ForumR
 --        _ -> redirect HomeR
