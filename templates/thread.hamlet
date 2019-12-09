@@ -15,7 +15,7 @@
                     Mensagem
         <tbody>
             $forall (Entity _ forum, Entity _ mensagem, Entity _ user) <- mensagens
-                <tr .row>
+                <tr>
                     <td .w-25.align-top>
                         Usuário: #{usuarioUsername user}
                         <br>
