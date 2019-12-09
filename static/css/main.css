@@ -89,6 +89,10 @@ h1 {
     clear: both;
     display:block;
 }
+.tbDesc {
+    font-size: 8pt;
+    width: 100px;
+}
 
 /* JOGO */
 .credit {
