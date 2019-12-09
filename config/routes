@@ -8,7 +8,7 @@
 /jogo/#Int              JogoR       GET
 /forum                  ForumR      GET POST
 /mensagem/#ForumId      MensagemR   POST
-/emensagem  EMensagemR  POST
+/emensagem              EMensagemR  POST
 /thread/#ForumId        ThreadR     GET 
 /config                 UserConfigR GET
 /registrar              RegisterR   GET POST

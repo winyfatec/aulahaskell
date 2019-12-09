@@ -115,12 +115,12 @@ postMensagemR fid = do
         _ -> redirect  $ ThreadR fid
 
 
-
+{-
 postEMensagemR :: Handler html
 postEMensagemR  = do
     --msg <- runDB $ get404 mid
     redirect ForumR
-
+-}
 
 -- postMensagemR :: Handler Html
 -- postMensagemR = do
