@@ -103,11 +103,11 @@ postMensagemR :: ForumId -> Handler Html
 postMensagemR fid = do
     texto <- lookupPostParam "mensagem"
     Just username <- lookupSession "_NOME"
-    Just (Entity pid _) <- runDB $ getBy (UniqueUsername username)
+    Just (Entity uid _) <- runDB $ getBy (UniqueUsername username)
     postada <- (liftIO getCurrentTime)
     case texto of
         Just txt -> do
-            runDB $ insert $ Mensagem fid pid txt postada
+            runDB $ insert $ Mensagem fid uid txt postada
             setMessage [shamlet|
                 Mensagem postada com sucesso!
             |]

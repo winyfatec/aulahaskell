@@ -43,7 +43,9 @@ postUserConfigR = do
     ((result,_),_) <- runFormPost formUserConfig
     case result of
         FormSuccess user -> do
-            _ <- runDB $ replace (UsuarioId user) $ user
+            Just username <- lookupSession "_NOME"
+            Just (Entity uid _) <- runDB $ getBy (UniqueUsername username)
+            _ <- runDB $ replace uid $ user
             --runDB $ updateWhere [uid ==. sess] [username *=. (userUsername user)]
             setMessage [shamlet|
                 <h2>
