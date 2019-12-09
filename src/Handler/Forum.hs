@@ -123,7 +123,7 @@ postEXMensagemR mid = do
     case msg of
         Just m -> do
             runDB $ delete mid
-            redirect ThreadR $ ForumId m
+            redirect ThreadR $ MensagemFkForumId m
         _ -> redirect ForumR
 
 
