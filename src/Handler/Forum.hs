@@ -105,8 +105,8 @@ postMensagemR fid = do
     Just (Entity pid _) <- runDB $ getBy (UniqueUsername username)
     postada <- (liftIO getCurrentTime)
     case texto of
-        Just forum -> do
-            runDB $ insert $ Mensagem fid pid texto postada
+        Just txt -> do
+            runDB $ insert $ Mensagem fid pid txt postada
             setMessage [shamlet|
                 Mensagem postada com sucesso!
             |]
