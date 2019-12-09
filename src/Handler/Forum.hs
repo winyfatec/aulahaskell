@@ -116,9 +116,28 @@ postMensagemR fid = do
 
 
 
-postTesteR :: Handler html
+
+postTesteR :: Handler Html
 postTesteR = do
-    redirect ForumR
+    cria <- lookupPostParam "titulo"
+    Just username <- lookupSession "_NOME"
+    --Just usuario <- runDB $ getBy (UniqueUsername username)
+    Just (Entity pid _) <- runDB $ getBy (UniqueUsername username)
+    -- Just uid <- runDB $ get (UserId usuario)
+    criado <- (liftIO getCurrentTime)
+    case cria of
+        Just titulo -> do
+            runDB $ insert $ Forum titulo pid criado
+            setMessage [shamlet|
+                Thread criada com sucesso!
+            |]
+            redirect ForumR
+        _ -> redirect HomeR
+
+
+
+    
+
 {-
 postEMensagemR  = do
     --msg <- runDB $ get404 mid
