@@ -110,7 +110,7 @@ postMensagemR fid = do
             setMessage [shamlet|
                 Mensagem postada com sucesso!
             |]
-            redirect ThreadR fid
+            redirect $ ThreadR fid
         _ -> redirect HomeR
 
 
