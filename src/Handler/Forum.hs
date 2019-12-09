@@ -120,7 +120,7 @@ postMensagemR fid = do
 postEXMensagemR :: MensagemId -> Handler Html
 postEXMensagemR mid = do
     msg <- runDB $ get404 mid
-    let fk = MensagemFkForumId msg
+    fk <- runDB $ get404 $ MensagemFkForumId msg
     runDB $ delete mid
     redirect ThreadR fk
 
