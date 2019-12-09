@@ -26,9 +26,9 @@
                                     <button .btn.btn-danger type="submit" value="Excluir">
                     <td .text-justify>
                         #{mensagemTexto mensagem}
-        <tfoot>
-            <tr>
-                <td colspan=2 .ftable>
-                    <form method=post action=@{MensagemR tid}>
-                        <input type="text" name="mensagem" .form-control>
-                        <input type="submit" name="postar" value="Postar" .btn.btn-primary>
+            <tfoot>
+                <tr>
+                    <td colspan="0" .ftable>
+                        <form method=post action=@{MensagemR tid}>
+                            <input type="text" name="mensagem" .form-control>
+                            <input type="submit" name="postar" value="Postar" .btn.btn-primary>
