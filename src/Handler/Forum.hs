@@ -119,20 +119,12 @@ postMensagemR fid = do
 
 postEXMensagemR :: MensagemId -> Handler Html
 postEXMensagemR mid = do
-    cria <- lookupPostParam "titulo"
-    Just username <- lookupSession "_NOME"
-    --Just usuario <- runDB $ getBy (UniqueUsername username)
-    Just (Entity pid _) <- runDB $ getBy (UniqueUsername username)
-    -- Just uid <- runDB $ get (UserId usuario)
-    criado <- (liftIO getCurrentTime)
-    case cria of
-        Just titulo -> do
-            runDB $ insert $ Forum titulo pid criado
-            setMessage [shamlet|
-                Thread criada com sucesso!
-            |]
-            redirect ForumR
-        _ -> redirect HomeR
+    msg <- runDB $ get404 mid
+    case msg of
+    Just m -> do
+        runDB $ delete mid
+        redirect ThreadR $ ForumId m
+    _ -> redirect ForumR
 
 
 
