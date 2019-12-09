@@ -20,6 +20,10 @@
                         Usuário: #{usuarioUsername user}
                         <br>
                         Data: #{dateFormat $ mensagemPostada mensagem}
+                        $if (usuarioUsername user == sess)
+                            <button .close type="button">
+                                <a href="@{ExcluirMsgR $ MensagemId mensagem}">
+                                    Excluir
                     <td .text-justify>
                         #{mensagemTexto mensagem}
         <tfoot>

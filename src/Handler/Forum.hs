@@ -113,6 +113,11 @@ postMensagemR fid = do
             |]
             redirect $ ThreadR fid
         _ -> redirect  $ ThreadR fid
+        
+getExcluirMsgR :: MensagemId -> Handler html
+getExcluirMsgR mid = do
+    msg <- runDB $ get404 mid
+    redirect $ Thread (ForumId msg)
 
 
 -- postMensagemR :: Handler Html
