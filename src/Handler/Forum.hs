@@ -116,8 +116,8 @@ postMensagemR fid = do
 
 
 
-postEMensagemR :: Handler html
-postEMensagemR = do
+postTesteR :: Handler html
+postTesteR = do
     redirect ForumR
 {-
 postEMensagemR  = do
