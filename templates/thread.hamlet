@@ -14,7 +14,7 @@
                 <th>
                     Mensagem
         <tbody>
-            $forall (Entity _ forum, Entity _ mensagem, Entity _ user) <- mensagens
+            $forall (Entity _ forum, Entity mid mensagem, Entity _ user) <- mensagens
                 <tr>
                     <td .tbDesc.align-top>
                         Usuário: #{usuarioUsername user}
@@ -23,7 +23,7 @@
                         $maybe uname <- sess
                             $if ((usuarioUsername user) == uname)
                                 <button .close type="button">
-                                    <a href="@{ExcluirMsgR $ mensagemId mensagem}">
+                                    <a href="@{ExcluirMsgR mid}">
                                         Excluir
                     <td .text-justify>
                         #{mensagemTexto mensagem}
