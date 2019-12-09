@@ -14,7 +14,7 @@
                 <th>
                     Mensagem
         <tbody>
-            $forall (Entity _ forum, Entity msgid mensagem, Entity _ user) <- mensagens
+            $forall (Entity _ forum, Entity _ mensagem, Entity _ user) <- mensagens
                 <tr>
                     <td .tbDesc.align-top>
                         Usuário: #{usuarioUsername user}
