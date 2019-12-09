@@ -111,7 +111,12 @@ postMensagemR fid = do
                 Mensagem postada com sucesso!
             |]
             redirect $ ThreadR fid
-        _ -> redirect HomeR
+        _ -> do
+            setMessage [shamlet|
+                Mensagem com erro
+            |]
+            redirect ForumR
+--        _ -> redirect HomeR
 
 
 -- postMensagemR :: Handler Html
