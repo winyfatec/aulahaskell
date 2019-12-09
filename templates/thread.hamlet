@@ -16,12 +16,12 @@
                     Mensagem
         <tbody>
             $forall (Entity _ forum, Entity _ mensagem, Entity _ user) <- mensagens
-                <tr>
-                    <td>
+                <tr .row>
+                    <td .col-2>
                         Usuário: #{usuarioUsername user}
                         Data: #{dateFormat $ mensagemPostada mensagem}
-                    <td>
-                        Mensagem: $#{show $ mensagemTexto mensagem}
+                    <td .col-auto>
+                        Mensagem: #{show $ mensagemTexto mensagem}
         <tfoot>
             <tr>
                 <td colspan=2 .ftable>
