@@ -113,7 +113,9 @@ postMensagemR fid = do
             |]
             redirect $ ThreadR fid
         _ -> redirect  $ ThreadR fid
-        
+
+
+
 postEMensagemR :: Handler html
 postEMensagemR  = do
     --msg <- runDB $ get404 mid
