@@ -11,16 +11,15 @@
         <thead .thread-dark>
             <tr>
                 <th>
-                    *
                 <th>
                     Mensagem
         <tbody>
             $forall (Entity _ forum, Entity _ mensagem, Entity _ user) <- mensagens
                 <tr .row>
-                    <td .col-2>
+                    <td .w-25>
                         Usuário: #{usuarioUsername user}
                         Data: #{dateFormat $ mensagemPostada mensagem}
-                    <td .col-auto>
+                    <td>
                         Mensagem: #{show $ mensagemTexto mensagem}
         <tfoot>
             <tr>
