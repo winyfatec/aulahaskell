@@ -23,7 +23,7 @@
                         $maybe uname <- sess
                             $if ((usuarioUsername user) == uname)
                                 <button .close type="button">
-                                    <a href="@{ExcluirMsgR (MensagemId mensagem)}">
+                                    <a href="@{ExcluirMsgR $ mensagemId mensagem}">
                                         Excluir
                     <td .text-justify>
                         #{mensagemTexto mensagem}
