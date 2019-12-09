@@ -22,9 +22,8 @@
                         Data: #{dateFormat $ mensagemPostada mensagem}
                         $maybe uname <- sess
                             $if ((usuarioUsername user) == uname)
-                                <button .close type="button">
-                                    <a href="@{EMensagemR msgid}">
-                                        Excluir
+                                <form method=post action="@{EMensagemR msgid}">
+                                    <button .btn.btn-danger type="submit" value="Excluir">
                     <td .text-justify>
                         #{mensagemTexto mensagem}
         <tfoot>
