@@ -15,15 +15,16 @@ import Yesod
 import Yesod.Form.Bootstrap3
 
 
-formUserConfig :: Form Usuario
-formUserConfig  = renderBootstrap $ Usuario
-    <$> areq textField nomeUsuario Nothing
+formUserConfig :: UsuarioUsername -> AForm  Usuario
+formUserConfig usr = renderBootstrap $ Usuario
+    <$> areq textField nomeUsuario (usuarioUsername <$> usr)
     <*> areq passwordField (bfs ("Senha" :: Text)) Nothing
     where nomeUsuario = withAutofocus $ withPlaceholder "Nome de usuário..." $ (bfs ("Nome de Usuário" :: Text))
 
 getUserConfigR :: Handler Html
 getUserConfigR = do
-    (widget,enctype) <- generateFormPost formUserConfig
+    sess <- lookupSession "_NOME"
+    (widget,enctype) <- generateFormPost $ formUserConfig Just sess
     defaultLayout $ do
         msg <- getMessage
         setTitle "Aula Haskell Fatec :: Configuração da conta"
