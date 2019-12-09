@@ -117,8 +117,8 @@ postMensagemR fid = do
 
 
 
-postTesteR :: MensagemId -> Handler Html
-postTesteR mid = do
+postEXMensagemR :: MensagemId -> Handler Html
+postEXMensagemR mid = do
     cria <- lookupPostParam "titulo"
     Just username <- lookupSession "_NOME"
     --Just usuario <- runDB $ getBy (UniqueUsername username)
