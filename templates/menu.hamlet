@@ -21,7 +21,7 @@
                         <img width="20" src="@{StaticR icons_fontawesome_regular_comments_svg}">
                         Forum
                 <li .nav-item>
-                    <a .nav-link href="#">
+                    <a .nav-link href="@{UserConfigR}">
                             Configurar
                 <li .nav-item>
                     <a href="@{LogoutR}" class="nav-link " data-value="sair">Sair
