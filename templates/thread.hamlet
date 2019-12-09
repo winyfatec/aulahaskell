@@ -1,6 +1,6 @@
 <div .pgcontainer>
     <h1>
-        #{ForumTitulo thread}
+        #{ForumTitulo forum}
         
     $maybe mensa <- msg
         <div .alert.alert-success>

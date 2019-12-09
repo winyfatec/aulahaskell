@@ -78,6 +78,7 @@ getThreadR tid = do
     sess <- lookupSession "_NOME"
     let sql = "SELECT ??,??,?? FROM mensagem INNER JOIN forum ON mensagem.fk_Forum_Id = forum.id INNER JOIN usuario ON mensagem.fk_User_Id = usuario.id WHERE forum.id = ?"
     thread <- runDB $ get404 tid
+    forum <- runDB $ get404 tid
     mensagens <- runDB $ rawSql sql [toPersistValue tid] :: Handler [(Entity Forum,Entity Mensagem,Entity Usuario)]
     -- (widget,enctype) <- generateFormPost formForum
     defaultLayout $ do
