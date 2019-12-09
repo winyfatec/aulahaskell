@@ -122,8 +122,9 @@ postEXMensagemR mid = do
     msg <- runDB $ get404 mid
     case msg of
         Just m -> do
+            let fkid = MensagemFkForumId m
             runDB $ delete mid
-            redirect ThreadR $ MensagemFkForumId m
+            redirect ThreadR fkid
         _ -> redirect ForumR
 
 
