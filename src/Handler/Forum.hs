@@ -114,8 +114,8 @@ postMensagemR fid = do
             redirect $ ThreadR fid
         _ -> redirect  $ ThreadR fid
         
-postEMensagemR :: MensagemId -> Handler html
-postEMensagemR msgid = do
+postExcluirR :: MensagemId -> Handler html
+postExcluirR msgid = do
     --msg <- runDB $ get404 mid
     redirect ForumR
 
