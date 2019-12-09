@@ -17,7 +17,7 @@ import Yesod.Form.Bootstrap3
 
 formUserConfig :: Form Usuario
 formUserConfig  = renderBootstrap $ Usuario
-    <$> areq textField nomeUsuario (Just lookupSession "_NOME")
+    <$> areq textField nomeUsuario (lookupSession "_NOME")
     <*> areq passwordField (bfs ("Senha" :: Text)) Nothing
     where nomeUsuario = withAutofocus $ withPlaceholder "Nome de usuário..." $ (bfs ("Nome de Usuário" :: Text))
 
