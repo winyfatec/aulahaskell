@@ -7,6 +7,7 @@
 /home               HomeR       GET
 /jogo/#Int          JogoR       GET
 /forum              ForumR      GET POST
+/mensagem/#ForumId  MensagemR   POST
 /thread/#ForumId    ThreadR     GET 
 /config             UserConfigR GET
 /registrar          RegisterR   GET POST
