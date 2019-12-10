@@ -30,7 +30,7 @@
                     <a .nav-link href="@{LoginR}">
                         Logar
                 <li .nav-item #registrarLink>
-                    < .nav-link href="@{RegisterR}">
+                    <a .nav-link href="@{RegisterR}">
                         Cadastro
                 
 
