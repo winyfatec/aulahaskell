@@ -13,22 +13,24 @@
                 <th>
                 <th>
                     Mensagem
+                <th>
         <tbody>
             $forall (Entity _ forum, Entity mid mensagem, Entity _ user) <- mensagens
                 <tr>
-                    <td .tbDesc.align-top.text-center>
+                    <td .tbDesc.align-top>
                         Usuário: #{usuarioUsername user}
                         <br>
                         Data: #{dateFormat $ mensagemPostada mensagem}
+                        
+                    <td .text-justify>
+                        #{mensagemTexto mensagem}
+                    <td .align-top>
                         $maybe uname <- sess
                             $if ((usuarioUsername user) == uname)
                                 <br>
                                 <form method=post action="@{EXMensagemR mid}">
                                     <button .close type="submit" name="excluir" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
-                    <td .text-justify>
-                        #{mensagemTexto mensagem}
-                        
     <form method=post action=@{MensagemR tid}>
         <textarea name="mensagem" .form-control rows=3 placeholder="Digite aqui sua mensagem...">
         <br>
