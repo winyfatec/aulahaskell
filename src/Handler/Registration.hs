@@ -48,6 +48,9 @@ postRegisterR = do
             runDB $ insert user
             setMessage [shamlet|
                 Cadastro efetuado com sucesso
+                <br>
+                <a href="@{LoginR}" .btn.btn-primary>
+                    Logar
             |]
             redirect RegisterR
         _ -> redirect HomeR

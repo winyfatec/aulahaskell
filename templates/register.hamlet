@@ -8,4 +8,5 @@
         Cadastro de Usuário
     <form .formregister method=post action=@{RegisterR}>
         ^{widget}
+        <br>
         <input .btn.btn-primary type="submit" value="Registrar">
