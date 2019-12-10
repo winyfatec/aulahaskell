@@ -4,9 +4,11 @@
             $maybe nomeSess <- sess
                 <li .nav-item>
                     <a .nav-link href="@{HomeR}">
+                        <img width="20" src="@{StaticR icons_fontawesome_regular_home_svg}">
                         Home
                 <li .nav-item.dropdown>
                     <a .nav-link.dropdown-toggle href="#" #navbarDropdownJogo role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img width="20" src="@{StaticR icons_fontawesome_regular_gamepad_svg}">
                         Jogar
                     <div .dropdown-menu aria-labelledby="navbarDropdownJogo">
                         <a .dropdown-item href="@{JogoR 1}">
@@ -22,15 +24,20 @@
                         Forum
                 <li .nav-item>
                     <a .nav-link href="@{UserConfigR}">
-                            Configurar
+                        <img width="20" src="@{StaticR icons_fontawesome_regular_user-cog_svg}">
+                        Configurar
                 <li .nav-item>
-                    <a href="@{LogoutR}" class="nav-link " data-value="sair">Sair
+                    <a href="@{LogoutR}" class="nav-link " data-value="sair">
+                        <img width="20" src="@{StaticR icons_fontawesome_regular_window-close_svg}">
+                        Sair
             $nothing
                 <li .nav-item #logarlink>
                     <a .nav-link href="@{LoginR}">
+                        <img width="20" src="@{StaticR icons_fontawesome_regular_grin-tongue-wink_svg}">
                         Logar
                 <li .nav-item #registrarLink>
                     <a .nav-link href="@{RegisterR}">
+                        <img width="20" src="@{StaticR icons_fontawesome_regular_id-card_svg}">
                         Cadastro
                 
 

@@ -90,8 +90,9 @@ h1 {
     display:block;
 }
 .tbDesc {
-    font-size: 8pt;
+    font-size: 10pt;
     width: 200px;
+    font-weight: bold;
 }
 
 /* JOGO */
