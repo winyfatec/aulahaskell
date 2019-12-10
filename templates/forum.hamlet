@@ -23,6 +23,6 @@
                     <td>
                         #{dateFormat $ forumCriado thread}
                         $#{show $ forumCriado thread}
-    <form .form-inline method=post action=@{ForumR}>
+    <form .form-inline.w-100 method=post action=@{ForumR}>
         <input type="text" name="titulo" .form-control placeholder="Digite o título aqui para adicionar um novo...">
         <input type="submit" name="criarnovo" value="Criar" .btn.btn-primary>
