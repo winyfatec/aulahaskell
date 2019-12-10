@@ -6,6 +6,6 @@
     
     <h1>
         Cadastro de Usuário
-    <form method=post action=@{RegisterR}>
+    <form .formregister method=post action=@{RegisterR}>
         ^{widget}
         <input .btn.btn-primary type="submit" value="Registrar">

@@ -64,7 +64,7 @@ h1 {
     color: #999999;
 }
 
-.formlogin {
+.formlogin,.formregister,.formconfig {
     width: 500px;
     margin: 0 auto;
     background-color: #FFFFFF;
