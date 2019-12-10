@@ -47,11 +47,9 @@ postRegisterR = do
         FormSuccess user -> do
             runDB $ insert user
             setMessage [shamlet|
-                Cadastro efetuado com sucesso
-                <br>
-                <a href="@{LoginR}" .btn.btn-primary>
-                    Logar
+                <div .alert.alert-success>
+                    Cadastro efetuado com sucesso
             |]
-            redirect RegisterR
+            redirect LoginR
         _ -> redirect HomeR
 
