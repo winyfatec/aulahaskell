@@ -14,7 +14,6 @@
                     Titulo
                 <th>
                     Data
-                <th>
         <tbody>
             $forall Entity pid thread <- threads
                 <tr>
@@ -24,13 +23,6 @@
                     <td>
                         #{dateFormat $ forumCriado thread}
                         $#{show $ forumCriado thread}
-                    <td>
-                        $maybe uname <- sess
-                            $if ((usuarioUsername user) == uname)
-                                <br>
-                                <form method=post action="@{EXMensagemR mid}">
-                                    <button .close type="submit" name="excluir" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
     <form .form-inline.float-right method=post action=@{ForumR}>
         <input type="text" name="titulo" .form-control placeholder="Digite o título aqui para adicionar um novo...">
         <input type="submit" name="criarnovo" value="Criar" .btn.btn-primary>
