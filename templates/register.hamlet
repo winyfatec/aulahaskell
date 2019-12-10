@@ -1,0 +1,11 @@
+<div .pgcontainer>
+    $maybe mensa <- msg
+        <div .alert.alert-success>
+            ^{mensa}
+    $nothing
+    
+    <h1>
+        Cadastro de Usuário
+    <form method=post action=@{RegisterR}>
+        ^{widget}
+        <input .btn.btn-primary type="submit" value="Registrar">
