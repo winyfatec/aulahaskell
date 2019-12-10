@@ -24,20 +24,20 @@
                         Forum
                 <li .nav-item>
                     <a .nav-link href="@{UserConfigR}">
-                        <img width="20" src="@{StaticR icons_fontawesome_solid_user-cog_svg}">
+                        <img width="20" src="@{StaticR icons_fontawesome_solid_usercog_svg}">
                         Configurar
                 <li .nav-item>
                     <a href="@{LogoutR}" class="nav-link " data-value="sair">
-                        <img width="20" src="@{StaticR icons_fontawesome_regular_window-close_svg}">
+                        <img width="20" src="@{StaticR icons_fontawesome_regular_windowclose_svg}">
                         Sair
             $nothing
                 <li .nav-item #logarlink>
                     <a .nav-link href="@{LoginR}">
-                        <img width="20" src="@{StaticR icons_fontawesome_regular_grin-tongue-wink_svg}">
+                        <img width="20" src="@{StaticR icons_fontawesome_regular_grintonguewink_svg}">
                         Logar
                 <li .nav-item #registrarLink>
                     <a .nav-link href="@{RegisterR}">
-                        <img width="20" src="@{StaticR icons_fontawesome_regular_id-card_svg}">
+                        <img width="20" src="@{StaticR icons_fontawesome_regular_idcard_svg}">
                         Cadastro
                 
 
