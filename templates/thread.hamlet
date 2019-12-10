@@ -16,7 +16,7 @@
         <tbody>
             $forall (Entity _ forum, Entity mid mensagem, Entity _ user) <- mensagens
                 <tr>
-                    <td .tbDesc.align-top>
+                    <td .tbDesc.align-top.text-center>
                         Usuário: #{usuarioUsername user}
                         <br>
                         Data: #{dateFormat $ mensagemPostada mensagem}
