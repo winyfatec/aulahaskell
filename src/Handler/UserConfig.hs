@@ -46,10 +46,10 @@ postUserConfigR = do
             Just username <- lookupSession "_NOME"
             Just (Entity uid _) <- runDB $ getBy (UniqueUsername username)
             _ <- runDB $ replace uid $ user
+            setSession "_NOME" (usuarioUsername user)
             --runDB $ updateWhere [uid ==. sess] [username *=. (userUsername user)]
             setMessage [shamlet|
-                <h2>
-                    Dados atualizados com sucesso!
+                Dados atualizados com sucesso!
             |]
             redirect UserConfigR
         _ -> redirect HomeR

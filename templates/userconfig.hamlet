@@ -1,6 +1,6 @@
 <div .pgcontainer>
     $maybe mensagem <- msg
-        <div .msg>
+        <div .alert.alert-success>
             ^{mensagem}
     $nothing
     
