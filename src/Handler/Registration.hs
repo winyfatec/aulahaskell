@@ -14,8 +14,8 @@ import Text.Julius
 import Yesod
 import Yesod.Form.Bootstrap3
 
-formRegister :: Form (Text,Text)
-formRegister  = renderBootstrap $ (,)
+formRegister :: Form Usuario
+formRegister  = renderBootstrap $ Usuario
     <$> areq textField nomeUsuario Nothing
     <*> areq passwordField (bfs ("Senha" :: Text)) Nothing
     where nomeUsuario = withAutofocus $ withPlaceholder "Nome de usuário..." $ (bfs ("Nome de Usuário" :: Text))
