@@ -6,7 +6,7 @@
     
     <h1>
         Configuração da conta
-    <form .formlogin method=post action=@{LoginR}>
+    <form .formlogin method=post action=@{UserConfigR}>
         ^{widget}
         <br>
         <input .btn.btn-primary type="submit" value="Salvar">
