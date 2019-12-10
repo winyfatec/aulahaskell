@@ -31,6 +31,7 @@
                         Logar
                 <li .nav-item #registrarLink>
                     < .nav-link href="@{RegisterR}">
+                        Cadastro
                 
 
 
