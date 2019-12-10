@@ -12,10 +12,11 @@ import Database.Persist.Postgresql
 import Text.Lucius
 import Text.Julius
 
-formRegister :: Form Usuario
-formRegister  = renderBootstrap $ Usuario
-    <$> areq textField "Nome de usuário: " Nothing
-    <*> areq passwordField "Senha: " Nothing
+formRegister :: Form (Text,Text)
+formRegister  = renderBootstrap $ (,)
+    <$> areq textField nomeUsuario Nothing
+    <*> areq passwordField (bfs ("Senha" :: Text)) Nothing
+    where nomeUsuario = withAutofocus $ withPlaceholder "Nome de usuário..." $ (bfs ("Nome de Usuário" :: Text))
 
 getRegisterR :: Handler Html
 getRegisterR = do
