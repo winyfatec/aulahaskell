@@ -23,9 +23,6 @@
                     <td>
                         #{dateFormat $ forumCriado thread}
                         $#{show $ forumCriado thread}
-        <tfoot>
-            <tr>
-                <td colspan="2" .ftable>
-                    <form method=post action=@{ForumR}>
-                        <input type="text" name="titulo" .form-control>
-                        <input type="submit" name="criarnovo" value="Criar" .btn.btn-primary>
+    <form method=post action=@{ForumR}>
+        <input type="text" name="titulo" .form-control>
+        <input type="submit" name="criarnovo" value="Criar" .btn.btn-primary>
