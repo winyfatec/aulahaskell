@@ -49,7 +49,7 @@ postRegisterR = do
         FormSuccess user -> do
             runDB $ insert user
             setMessage [shamlet|
-                Usuário inserido com sucesso
+                Cadastro efetuado com sucesso
             |]
             redirect RegisterR
         _ -> redirect HomeR
