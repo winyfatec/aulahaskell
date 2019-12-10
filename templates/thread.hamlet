@@ -27,6 +27,6 @@
                     <td .text-justify>
                         #{mensagemTexto mensagem}
                         
-        <form method=post action=@{MensagemR tid}>
-            <textarea name="mensagem" .form-control rows=3 placeholder="Digite aqui o texto">
-            <input type="submit" name="postar" value="Postar" .btn.btn-primary>
+    <form method=post action=@{MensagemR tid}>
+        <textarea name="mensagem" .form-control rows=3 placeholder="Digite aqui o texto">
+        <input type="submit" name="postar" value="Postar" .btn.btn-primary>
