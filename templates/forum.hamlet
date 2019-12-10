@@ -1,4 +1,4 @@
-<div .pgcontainer>
+<div .pgcontainer.clearfix>
     <h1>
         Forum
         
