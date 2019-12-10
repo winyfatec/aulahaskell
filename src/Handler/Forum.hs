@@ -122,6 +122,7 @@ postMensagemR fid = do
 postEXMensagemR :: MensagemId -> Handler Html
 postEXMensagemR mid = do
     msg <- runDB $ get404 mid
+    Just (Entity fid _) <- runDB $ getBy (ForumId mid)
     runDB $ delete mid
     redirect ForumR
 
