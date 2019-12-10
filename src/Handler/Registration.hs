@@ -11,6 +11,8 @@ import Import
 import Database.Persist.Postgresql
 import Text.Lucius
 import Text.Julius
+import Yesod
+import Yesod.Form.Bootstrap3
 
 formRegister :: Form (Text,Text)
 formRegister  = renderBootstrap $ (,)
@@ -23,7 +25,7 @@ getRegisterR = do
     (widget,enctype) <- generateFormPost formRegister
     defaultLayout $ do
         msg <- getMessage
-        setTitle "Aula Haskell Fatec :: Login"
+        setTitle "Aula Haskell Fatec :: Registrar usuário"
         sess <- lookupSession "_NOME"
         addStylesheet $ StaticR css_main_css
         addScript $ StaticR js_main_js
