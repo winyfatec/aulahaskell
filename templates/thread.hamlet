@@ -28,6 +28,6 @@
                         #{mensagemTexto mensagem}
                         
     <form method=post action=@{MensagemR tid}>
-        <textarea name="mensagem" .form-control.w-50 rows=3 placeholder="Digite aqui sua mensagem...">
+        <textarea name="mensagem" .form-control.w-75.text-center rows=3 placeholder="Digite aqui sua mensagem...">
         <br>
         <input type="submit" name="postar" value="Postar" .btn.btn-primary>
