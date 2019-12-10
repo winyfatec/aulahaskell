@@ -16,3 +16,4 @@ Mensagem
     texto Text
     postada UTCTime default=CURRENT_TIMESTAMP
     deriving Show
+
