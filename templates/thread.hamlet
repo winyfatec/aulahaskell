@@ -23,7 +23,7 @@
                         $maybe uname <- sess
                             $if ((usuarioUsername user) == uname)
                                 <form method=post action="@{EXMensagemR mid}">
-                                    <input .btn.btn-danger type="submit" name="excluir" value="Excluir">
+                                    <input .close type="submit" name="excluir" value="Excluir">
                     <td .text-justify>
                         #{mensagemTexto mensagem}
                         
